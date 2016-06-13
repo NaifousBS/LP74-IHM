@@ -180,7 +180,7 @@
             </div>
             <div class="row">
                 <div class="form-group col-lg-6">
-                   <button type="button" class="btn btn-success pull-right ">Visualiser le SWOT</button>  
+                   <button type="button" class="btn btn-success pull-right " onclick="window.location='visualiser_swot.php';">Visualiser le SWOT</button>  
                 </div>
             </div>
         
