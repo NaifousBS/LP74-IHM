@@ -55,6 +55,9 @@
                 <li>
                     <a href="index.html"><i class="fa fa-files-o fa-fw"></i> ISHIKAWA</a>
                 </li>
+                <li>
+                    <a href="mes_objectifs.php"><i class="fa fa-files-o fa-fw"></i>Mes objectifs</a>
+                </li>
 
 
 
