@@ -64,10 +64,10 @@
                             <ul class="nav nav-second-level">
                                 
                                 <li>
-                                    <a href="construire_swot.html">Construire</a>
+                                    <a href="buttons.html">Construire</a>
                                 </li>
                                 <li>
-                                    <a href="visualiser_swot.html">Visualiser</a>
+                                    <a href="swot.html">Visualiser</a>
                                 </li>
                                
                             </ul>
@@ -75,18 +75,7 @@
                         </li>
                         
                         <li>
-                            <a href="#"><i class="fa fa-wrench fa-fw"></i>PESTEL<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                
-                                <li>
-                                    <a href="construire_pestel.html">Construire</a>
-                                </li>
-                                <li>
-                                    <a href="visualiser_pestel.html">Visualiser</a>
-                                </li>
-                               
-                            </ul>
-                            <!-- /.nav-second-level -->
+                            <a href="index.html"><i class="fa fa-sitemap fa-fw"></i> PESTEL</a>
                         </li>
                         <li>
                             <a href="index.html"><i class="fa fa-files-o fa-fw"></i> ISHIKAWA</a>
