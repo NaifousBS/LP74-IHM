@@ -75,13 +75,13 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <img src="http://127.0.0.1/projects/LP74-IHM/Code/img/1.png" class="img-thumbnail">
+                        <img src="../img/1.png" class="img-thumbnail">
                     </div>
                     <div class="col-md-4">
-                        <img src="http://127.0.0.1/projects/LP74-IHM/Code/img/2.png" class="img-thumbnail">
+                        <img src="../img/2.png" class="img-thumbnail">
                     </div>
                     <div class="col-md-4">
-                        <img src="http://127.0.0.1/projects/LP74-IHM/Code/img/3.png" class="img-thumbnail">
+                        <img src="../img/3.png" class="img-thumbnail">
                     </div>
                 </div>
                 <br><br>
@@ -94,7 +94,7 @@
                 <div class="row" style="margin-top: 20px">
                     
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" id="nomProjet" placeholder="Nom de votre projet"></input>
+                            <input type="text" class="form-control" id="nomProjet" placeholder="Nom de votre projet"/>
                         </div>
                         <div class="col-sm-4">
                             <button type="button" class="btn btn-primary" onclick="window.location='construire_swot.php'">Valider</button>

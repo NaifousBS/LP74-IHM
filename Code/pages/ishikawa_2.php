@@ -127,7 +127,7 @@
                 </div>
             </div>
             <div class="row col-lg-9 form-group">
-                <button type="button" class="btn btn-info pull-right"> Valider </button> <br/>
+                <button type="button" class="btn btn-info pull-right" onclick="window.location='index.php';"> Valider </button> <br/>
             </div>
             
             
