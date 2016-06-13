@@ -64,15 +64,10 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-8">
-                    <h1 class="page-header">Bienvenue Prenom Nom</h1>
+                    <h1 class="page-header">Bienvenue dans l'outil de construction de diagramme ISHIKAWA</h1>
                 </div>
             </div>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <a>Bienvenue dans l'outil de construction de diagramme ISHIKAWA</a>
-                    </div>
-                    <br><br>
-                </div>
+
                 <div class="row">
                     <div class="col-md-4">
                         <img src="../img/1.png" class="img-thumbnail">
@@ -87,7 +82,7 @@
                 <br><br>
                 <div class="row">
                     <div class="col-sm-8">
-                        <h2><span class="label label-primary">Pour commencer, nommez votre projet</span></h2>                        
+                        <h2><span class="label label-primary">Pour commencer, créez votre projet</span></h2>                        
                     </div>
                 </div>
 
@@ -100,6 +95,22 @@
                             <button type="button" class="btn btn-primary" onclick="window.location='construire_swot.php'">Valider</button>
                         </div>
                     
+                </div>
+                <div class="row">
+                    <div class="col-sm-8">
+                        <h2><span class="label label-primary">ou chargez un projet dans la liste</span></h2>                        
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 20px; margin-left: 40px;">
+                    <div class="dropdown">
+                          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Chargez un projet
+                          <span class="caret"></span></button>
+                          <ul class="dropdown-menu">
+                            <li><a href="#">Projet1</a></li>
+                            <li><a href="#">Projet2</a></li>
+                            <li><a href="#">Projet3</a></li>
+                          </ul>
+                    </div>
                 </div>
         </div>
     </div>
@@ -123,8 +134,8 @@
 
     <style>
     img.img-thumbnail{
-        width: 300px;
-        height: 300px;
+        width: 150px;
+        height: 150px;
         border-radius:20px;
         border: 1px solid blue;
     }

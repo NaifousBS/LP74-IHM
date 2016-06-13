@@ -65,7 +65,7 @@
                 
                 <!-- /.col-lg-4 -->
                 <div class="col-lg-4">
-                    <div class="panel panel-primary">
+                    <div class="panel panel-yellow">
                         <div class="panel-heading">
                             Politique
                         </div>
@@ -95,7 +95,7 @@
                 <div class="row">
                 <!-- /.col-lg-4 -->
                 <div class="col-lg-4">
-                    <div class="panel panel-green">
+                    <div class="panel panel-yellow">
                         <div class="panel-heading">
                             Socioculturel
                         </div>
@@ -110,17 +110,17 @@
                 
                 <!-- /.col-lg-4 -->
                 <div class="col-lg-4">
-                    <div class="panel panel-red rond">
+                    <div class="panel panel-primary">
                         <div class="panel-heading">
                             Titre
                         </div>
-                        <div class="panel-body rond">
+                        <div class="panel-body">
                             <p>Titre du diagramme PESTEL</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="panel panel-red">
+                    <div class="panel panel-yellow">
                         <div class="panel-heading">
                             Technologique
                         </div>
@@ -135,7 +135,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-4">
-                    <div class="panel panel-red">
+                    <div class="panel panel-yellow">
                         <div class="panel-heading">
                             Ecologique
                         </div>
@@ -148,7 +148,7 @@
                     </div>
                 </div>
                 <div class="col-lg-offset-4 col-lg-4">
-                    <div class="panel panel-red">
+                    <div class="panel panel-yellow">
                         <div class="panel-heading">
                             Légal
                         </div>
