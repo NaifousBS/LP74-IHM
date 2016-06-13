@@ -68,7 +68,7 @@
             </div>
             <div class="row form-group">
                 <div class="col-lg-8 ">
-                    <p>Choisir les objectifs qui se retrouveront dans les arêtes de premier niveau dans le diagramme d'Ishikawa</p>
+                    <p>Sélectionnez un objectif et une arête de niveau 1, puis cliquez sur le bouton >> pour ajouter une arête de niveau 2 </p>
                 </div>
             </div>
             
@@ -85,7 +85,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 form-group">
-                    <label for="listNoeuds">Arêtes niveau 1:</label>
+                    <label for="listNoeuds">Arêtes:</label>
                 </div>
             </div>
             <div class="row">
@@ -94,7 +94,7 @@
                 <input type="text" class="form-control col-lg-3" id="inputStrength">
             </div>
             <div class="col-lg-1 form-group">
-                 <button type="button" class="btn btn-success"> + </button> 
+                 <button type="button" class="btn btn-success pull-right"> + </button> 
             </div>
             
             </div>

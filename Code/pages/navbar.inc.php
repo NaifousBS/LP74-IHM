@@ -53,11 +53,24 @@
                     <!-- /.nav-second-level -->
                 </li>
                 <li>
-                    <a href="index.html"><i class="fa fa-files-o fa-fw"></i> ISHIKAWA</a>
+                    <a href="#"><i class="fa fa-files fa-fw"></i>ISHIKAWA<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+
+                        <li>
+                            <a href="ishikawa_1.php">Choisir arêtes 1</a>
+                        </li>
+                        <li>
+                            <a href="ishikawa_2.php">Choisir arêtes 2</a>
+                        </li>
+                        <li>
+                            <a href="visualiser_pestel.php">Visualiser</a>
+                        </li>
+
+                    </ul>
+                    <!-- /.nav-second-level -->
                 </li>
-                <li>
-                    <a href="mes_objectifs.php"><i class="fa fa-files-o fa-fw"></i>Mes objectifs</a>
-                </li>
+               
+               
 
 
 

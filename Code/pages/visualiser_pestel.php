@@ -164,7 +164,7 @@
             </div>
             <div class="row">               
                     <button type="button" class="btn btn-secondary pull-left" onclick="window.location='construire_pestel.php';">Modifier le PESTEL</button>  
-                   <button type="button" class="btn btn-info pull-right ">Valider</button>                  
+                   <button type="button" class="btn btn-info pull-right" onclick="window.location='ishikawa_1.php';">Passer au ISHIKAWA</button>                  
             </div>
             <!-- /.row -->
         </div>

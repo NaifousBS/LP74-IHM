@@ -74,7 +74,7 @@
                     <input type="text" class="form-control" id="inputStrength">
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-success col-md-3">Ajouter</button>  
+                   <button type="button" class="btn btn-primary col-md-3">Ajouter</button>  
                 </div>
             </div>
             <div class="row">
@@ -104,7 +104,7 @@
                     <input type="text" class="form-control" id="inputStrength">
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-success col-md-3">Ajouter</button>  
+                   <button type="button" class="btn btn-primary col-md-3">Ajouter</button>  
                 </div>
             </div>
             <div class="row">
@@ -132,7 +132,7 @@
                     <input type="text" class="form-control" id="inputStrength">
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-success col-md-3">Ajouter</button>  
+                   <button type="button" class="btn btn-primary col-md-3">Ajouter</button>  
                 </div>
             </div>
             <div class="row">
@@ -160,7 +160,7 @@
                     <input type="text" class="form-control" id="inputStrength">
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-success col-md-3">Ajouter</button>  
+                   <button type="button" class="btn btn-primary col-md-3">Ajouter</button>  
                 </div>
             </div>
             <div class="row">
@@ -188,7 +188,7 @@
                     <input type="text" class="form-control" id="inputStrength">
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-success col-md-3">Ajouter</button>  
+                   <button type="button" class="btn btn-primary col-md-3">Ajouter</button>  
                 </div>
             </div>
             <div class="row">
@@ -216,7 +216,7 @@
                     <input type="text" class="form-control" id="inputStrength">
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-success col-md-3">Ajouter</button>  
+                   <button type="button" class="btn btn-primary col-md-3">Ajouter</button>  
                 </div>
             </div>
             <div class="row">
