@@ -74,7 +74,7 @@
                     <input type="text" class="form-control" id="inputStrength">
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-info col-md-3">Ajouter</button>  
+                   <button type="button" class="btn btn-success col-md-3">Ajouter</button>  
                 </div>
             </div>
             <div class="row">
@@ -104,7 +104,7 @@
                     <input type="text" class="form-control" id="inputStrength">
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-info col-md-3">Ajouter</button>  
+                   <button type="button" class="btn btn-success col-md-3">Ajouter</button>  
                 </div>
             </div>
             <div class="row">
@@ -132,7 +132,7 @@
                     <input type="text" class="form-control" id="inputStrength">
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-info col-md-3">Ajouter</button>  
+                   <button type="button" class="btn btn-success col-md-3">Ajouter</button>  
                 </div>
             </div>
             <div class="row">
@@ -160,7 +160,7 @@
                     <input type="text" class="form-control" id="inputStrength">
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-info col-md-3">Ajouter</button>  
+                   <button type="button" class="btn btn-success col-md-3">Ajouter</button>  
                 </div>
             </div>
             <div class="row">
@@ -180,7 +180,7 @@
             </div>
             <div class="row">
                 <div class="form-group col-lg-6">
-                   <button type="button" class="btn btn-success pull-right " onclick="window.location='visualiser_swot.php';">Visualiser le SWOT</button>  
+                   <button type="button" class="btn btn-info pull-right " onclick="window.location='visualiser_swot.php';">Visualiser le SWOT</button>  
                 </div>
             </div>
         
