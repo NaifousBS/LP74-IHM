@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Diagramme SWOT</title>
+    <title>Diagramme PESTEL</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -50,125 +50,199 @@
             <!-- /.navbar-header -->
 
             
-            <!-- /.navbar-top-links -->
 
-            <div class="navbar-default sidebar" role="navigation">
-                <div class="sidebar-nav navbar-collapse">
-                    <ul class="nav" id="side-menu">
-                       
-                        <li>
-                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Accueil</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-wrench fa-fw"></i>SWOT<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                
-                                <li>
-                                    <a href="buttons.html">Construire</a>
-                                </li>
-                                <li>
-                                    <a href="swot.html">Visualiser</a>
-                                </li>
-                               
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        
-                        <li>
-                            <a href="index.html"><i class="fa fa-sitemap fa-fw"></i> PESTEL</a>
-                        </li>
-                        <li>
-                            <a href="index.html"><i class="fa fa-files-o fa-fw"></i> ISHIKAWA</a>
-                        </li>
-                        
-                       
-                        
-                        
-                    </ul>
-                </div>
-                <!-- /.sidebar-collapse -->
-            </div>
+            <?php include('navbar.inc.php'); ?> 
             <!-- /.navbar-static-side -->
         </nav>
 
         <div id="page-wrapper">
             <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">SWOT</h1>
+                <div class="col-lg-8">
+                    <h1 class="page-header">PESTEL</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
-            <!-- /.row -->
+            
+            
+            <!-- Politique -->
             <div class="row">
-                
-                <!-- /.col-lg-4 -->
-                <div class="col-lg-4">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            Strength
-                        </div>
-                        <div class="panel-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
-                        </div>
-                        <div class="panel-footer">
-                            Panel Footer
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="panel panel-yellow">
-                        <div class="panel-heading">
-                            Weaknesses
-                        </div>
-                        <div class="panel-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
-                        </div>
-                        <div class="panel-footer">
-                            Panel Footer
-                        </div>
-                    </div>
-                    <!-- /.col-lg-4 -->
-                </div>
-                
-                <!-- /.col-lg-4 -->
+                <label for="inputStrength">Politique:</label>
             </div>
-            <!-- /.row -->
+            
             <div class="row">
-                <!-- /.col-lg-4 -->
-                <div class="col-lg-4">
-                    <div class="panel panel-green">
-                        <div class="panel-heading">
-                            Opportunities
-                        </div>
-                        <div class="panel-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
-                        </div>
-                        <div class="panel-footer">
-                            Panel Footer
-                        </div>
-                    </div>
+                <div class="col-lg-6 form-group">
+                    <input type="text" class="form-control" id="inputStrength">
                 </div>
-                <!-- /.col-lg-4 -->
-                <div class="col-lg-4">
-                    <div class="panel panel-red">
-                        <div class="panel-heading">
-                            Threats
-                        </div>
-                        <div class="panel-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
-                        </div>
-                        <div class="panel-footer">
-                            Panel Footer
-                        </div>
-                    </div>
+                <div class="col-md-5">
+                   <button type="button" class="btn btn-success col-md-3">Ajouter</button>  
                 </div>
-                <!-- /.col-lg-4 -->
+            </div>
+            <div class="row">
+                <div class="col-lg-6 form-group">
+                    <select  class="form-control" name="listStrength" size="5">
+                        <option>text1</option>
+                        <option>text2</option>
+                        <option>text3</option>
+                        <option>text4</option>
+                        <option>text5</option>
+                    </select>
+                    
+                </div>
+                <div class="col-md-5">
+                   <button type="button" class="btn btn-danger col-md-3">Supprimer</button>  
+                </div>
             </div>
             
             
             
+            <!-- Economique -->
+            <div class="row">
+                <label for="inputStrength">Economique:</label>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 form-group">
+                    <input type="text" class="form-control" id="inputStrength">
+                </div>
+                <div class="col-md-5">
+                   <button type="button" class="btn btn-success col-md-3">Ajouter</button>  
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 form-group">
+                    <select  class="form-control" name="listStrength" size="5">
+                        <option>text1</option>
+                        <option>text2</option>
+                        <option>text3</option>
+                        <option>text4</option>
+                        <option>text5</option>
+                    </select>
+                    
+                </div>
+                <div class="col-md-5">
+                   <button type="button" class="btn btn-danger col-md-3">Supprimer</button>  
+                </div>
+            </div>
+            
+             <!-- Socioculturel -->
+            <div class="row">
+                <label for="inputStrength">Socioculturel:</label>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 form-group">
+                    <input type="text" class="form-control" id="inputStrength">
+                </div>
+                <div class="col-md-5">
+                   <button type="button" class="btn btn-success col-md-3">Ajouter</button>  
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 form-group">
+                    <select  class="form-control" name="listStrength" size="5">
+                        <option>text1</option>
+                        <option>text2</option>
+                        <option>text3</option>
+                        <option>text4</option>
+                        <option>text5</option>
+                    </select>
+                    
+                </div>
+                <div class="col-md-5">
+                   <button type="button" class="btn btn-danger col-md-3">Supprimer</button>  
+                </div>
+            </div>
+            
+             <!-- Technologique -->
+            <div class="row">
+                <label for="inputStrength">Technologique:</label>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 form-group">
+                    <input type="text" class="form-control" id="inputStrength">
+                </div>
+                <div class="col-md-5">
+                   <button type="button" class="btn btn-success col-md-3">Ajouter</button>  
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 form-group">
+                    <select  class="form-control" name="listStrength" size="5">
+                        <option>text1</option>
+                        <option>text2</option>
+                        <option>text3</option>
+                        <option>text4</option>
+                        <option>text5</option>
+                    </select>
+                    
+                </div>
+                <div class="col-md-5">
+                   <button type="button" class="btn btn-danger col-md-3">Supprimer</button>  
+                </div>
+            </div>
+
+            <!-- Ecologique -->
+            <div class="row">
+                <label for="inputStrength">Ecologique:</label>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 form-group">
+                    <input type="text" class="form-control" id="inputStrength">
+                </div>
+                <div class="col-md-5">
+                   <button type="button" class="btn btn-success col-md-3">Ajouter</button>  
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 form-group">
+                    <select  class="form-control" name="listStrength" size="5">
+                        <option>text1</option>
+                        <option>text2</option>
+                        <option>text3</option>
+                        <option>text4</option>
+                        <option>text5</option>
+                    </select>
+                    
+                </div>
+                <div class="col-md-5">
+                   <button type="button" class="btn btn-danger col-md-3">Supprimer</button>  
+                </div>
+            </div>
+
+            <!-- Légal -->
+            <div class="row">
+                <label for="inputStrength">Légal:</label>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 form-group">
+                    <input type="text" class="form-control" id="inputStrength">
+                </div>
+                <div class="col-md-5">
+                   <button type="button" class="btn btn-success col-md-3">Ajouter</button>  
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 form-group">
+                    <select  class="form-control" name="listStrength" size="5">
+                        <option>text1</option>
+                        <option>text2</option>
+                        <option>text3</option>
+                        <option>text4</option>
+                        <option>text5</option>
+                    </select>
+                    
+                </div>
+                <div class="col-md-5">
+                   <button type="button" class="btn btn-danger col-md-3">Supprimer</button>  
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="form-group col-lg-6">
+                   <button type="button" class="btn btn-secondary" onclick="window.location='visualiser_swot.php';">Retour au SWOT</button>
+                   <button type="button" class="btn btn-info pull-right " onclick="window.location='visualiser_pestel.php';">Visualiser le PESTEL</button>  
+                </div>
+            </div>
         
-            <!-- /.row -->
         </div>
         <!-- /#page-wrapper -->
 

@@ -121,7 +121,7 @@
             <div class="row">
                 <div class="form-group col-lg-8">
                     <button type="button" class="btn btn-secondary pull-left " onclick="window.location='construire_swot.php';">Modifier le SWOT</button>  
-                   <button type="button" class="btn btn-info pull-right ">Passer au PESTEL</button>  
+                   <button type="button" class="btn btn-info pull-right " onclick="window.location='construire_pestel.php';">Passer au PESTEL</button>  
                 </div>
             </div>
             
