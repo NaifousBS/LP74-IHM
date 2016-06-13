@@ -52,42 +52,7 @@
             
             <!-- /.navbar-top-links -->
 
-            <div class="navbar-default sidebar" role="navigation">
-                <div class="sidebar-nav navbar-collapse">
-                    <ul class="nav" id="side-menu">
-                       
-                        <li>
-                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Accueil</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-wrench fa-fw"></i>SWOT<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                
-                                <li>
-                                    <a href="buttons.html">Construire</a>
-                                </li>
-                                <li>
-                                    <a href="swot.html">Visualiser</a>
-                                </li>
-                               
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        
-                        <li>
-                            <a href="index.html"><i class="fa fa-sitemap fa-fw"></i> PESTEL</a>
-                        </li>
-                        <li>
-                            <a href="index.html"><i class="fa fa-files-o fa-fw"></i> ISHIKAWA</a>
-                        </li>
-                        
-                       
-                        
-                        
-                    </ul>
-                </div>
-                <!-- /.sidebar-collapse -->
-            </div>
+            <?php include('navbar.inc.php'); ?> 
             <!-- /.navbar-static-side -->
         </nav>
 
@@ -108,7 +73,9 @@
                             Strength
                         </div>
                         <div class="panel-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
+                            <div class="form-group">
+                              <textarea class="form-control" rows="5" id="comment"></textarea>
+                            </div>
                         </div>
                         <div class="panel-footer">
                             Panel Footer
