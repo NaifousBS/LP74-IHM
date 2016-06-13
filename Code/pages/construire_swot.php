@@ -62,92 +62,123 @@
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
-            <!-- /.row -->
+            
+            
+            <!-- Strengths -->
             <div class="row">
-                
-                <!-- /.col-lg-4 -->
-                <div class="col-lg-4">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            Strength
-                        </div>
-                        <div class="panel-body">
-                            <div class="form-group">
-                              <textarea class="form-control" rows="5" id="comment"></textarea>
-                            </div>
-                        </div>
-                        <div class="panel-footer">
-                            Panel Footer
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="panel panel-yellow">
-                        <div class="panel-heading">
-                            Weaknesses
-                        </div>
-                        <div class="panel-body">
-                            <div class="form-group">
-                              <textarea class="form-control" rows="5" id="comment"></textarea>
-                            </div>
-                        </div>
-                        <div class="panel-footer">
-                            Panel Footer
-                        </div>
-                    </div>
-                    <!-- /.col-lg-4 -->
-                </div>
-                
-                <!-- /.col-lg-4 -->
-            </div>
-            <!-- /.row -->
-            <div class="row">
-                <!-- /.col-lg-4 -->
-                <div class="col-lg-4">
-                    <div class="panel panel-green">
-                        <div class="panel-heading">
-                            Opportunities
-                        </div>
-                        <div class="panel-body">
-                            <div class="form-group">
-                              <textarea class="form-control" rows="5" id="comment"></textarea>
-                            </div>
-                        </div>
-                        <div class="panel-footer">
-                            Panel Footer
-                        </div>
-                    </div>
-                </div>
-                <!-- /.col-lg-4 -->
-                <div class="col-lg-4">
-                    <div class="panel panel-red">
-                        <div class="panel-heading">
-                            Threats
-                        </div>
-                        <div class="panel-body">
-                            <div class="form-group">
-                              <textarea class="form-control" rows="5" id="comment"></textarea>
-                            </div>
-                        </div>
-                        <div class="panel-footer">
-                            Panel Footer
-                        </div>
-                    </div>
-                </div>
-                <!-- /.col-lg-4 -->
+                <label for="inputStrength">Strength:</label>
             </div>
             
             <div class="row">
-                <div class="col-lg-12">
-                    <button type="button" class="btn btn-info col-lg-8">Valider</button>
+                <div class="col-lg-6 form-group">
+                    <input type="text" class="form-control" id="inputStrength">
                 </div>
-            
+                <div class="col-md-5">
+                   <button type="button" class="btn btn-info col-md-3">Ajouter</button>  
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 form-group">
+                    <select  class="form-control" name="listStrength" size="5">
+                        <option>text1</option>
+                        <option>text2</option>
+                        <option>text3</option>
+                        <option>text4</option>
+                        <option>text5</option>
+                    </select>
+                    
+                </div>
+                <div class="col-md-5">
+                   <button type="button" class="btn btn-danger col-md-3">Supprimer</button>  
+                </div>
             </div>
             
             
             
+            <!-- Weaknesses -->
+            <div class="row">
+                <label for="inputStrength">Weaknesses:</label>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 form-group">
+                    <input type="text" class="form-control" id="inputStrength">
+                </div>
+                <div class="col-md-5">
+                   <button type="button" class="btn btn-info col-md-3">Ajouter</button>  
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 form-group">
+                    <select  class="form-control" name="listStrength" size="5">
+                        <option>text1</option>
+                        <option>text2</option>
+                        <option>text3</option>
+                        <option>text4</option>
+                        <option>text5</option>
+                    </select>
+                    
+                </div>
+                <div class="col-md-5">
+                   <button type="button" class="btn btn-danger col-md-3">Supprimer</button>  
+                </div>
+            </div>
+            
+             <!-- Opportunities -->
+            <div class="row">
+                <label for="inputStrength">Opportunities:</label>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 form-group">
+                    <input type="text" class="form-control" id="inputStrength">
+                </div>
+                <div class="col-md-5">
+                   <button type="button" class="btn btn-info col-md-3">Ajouter</button>  
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 form-group">
+                    <select  class="form-control" name="listStrength" size="5">
+                        <option>text1</option>
+                        <option>text2</option>
+                        <option>text3</option>
+                        <option>text4</option>
+                        <option>text5</option>
+                    </select>
+                    
+                </div>
+                <div class="col-md-5">
+                   <button type="button" class="btn btn-danger col-md-3">Supprimer</button>  
+                </div>
+            </div>
+            
+             <!-- Threats -->
+            <div class="row">
+                <label for="inputStrength">Threats:</label>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 form-group">
+                    <input type="text" class="form-control" id="inputStrength">
+                </div>
+                <div class="col-md-5">
+                   <button type="button" class="btn btn-info col-md-3">Ajouter</button>  
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 form-group">
+                    <select  class="form-control" name="listStrength" size="5">
+                        <option>text1</option>
+                        <option>text2</option>
+                        <option>text3</option>
+                        <option>text4</option>
+                        <option>text5</option>
+                    </select>
+                    
+                </div>
+                <div class="col-md-5">
+                   <button type="button" class="btn btn-danger col-md-3">Supprimer</button>  
+                </div>
+            </div>
         
-            <!-- /.row -->
         </div>
         <!-- /#page-wrapper -->
 
