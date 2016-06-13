@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Diagramme SWOT</title>
+    <title>Diagramme PESTEL</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -47,54 +47,16 @@
                 </button>
                 <a class="navbar-brand" href="index.html">Environnement d'étude stratégique </a>
             </div>
-            <!-- /.navbar-header -->
+          
 
-            
-            <!-- /.navbar-top-links -->
-
-            <div class="navbar-default sidebar" role="navigation">
-                <div class="sidebar-nav navbar-collapse">
-                    <ul class="nav" id="side-menu">
-                       
-                        <li>
-                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Accueil</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-wrench fa-fw"></i>SWOT<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                
-                                <li>
-                                    <a href="construire_swot.html">Construire</a>
-                                </li>
-                                <li>
-                                    <a href="visualiser_swot.html">Visualiser</a>
-                                </li>
-                               
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        
-                        <li>
-                            <a href="index.html"><i class="fa fa-sitemap fa-fw"></i> PESTEL</a>
-                        </li>
-                        <li>
-                            <a href="index.html"><i class="fa fa-files-o fa-fw"></i> ISHIKAWA</a>
-                        </li>
-                        
-                       
-                        
-                        
-                    </ul>
-                </div>
-                <!-- /.sidebar-collapse -->
-            </div>
+           <?php include('navbar.inc.php'); ?> 
             <!-- /.navbar-static-side -->
         </nav>
 
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">SWOT</h1>
+                    <h1 class="page-header">PESTEL</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -105,7 +67,7 @@
                 <div class="col-lg-4">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                            Strength
+                            Politique
                         </div>
                         <div class="panel-body">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
@@ -115,10 +77,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-offset-4 col-lg-4">
                     <div class="panel panel-yellow">
                         <div class="panel-heading">
-                            Weaknesses
+                            Economique
                         </div>
                         <div class="panel-body">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
@@ -129,16 +91,13 @@
                     </div>
                     <!-- /.col-lg-4 -->
                 </div>
-                
-                <!-- /.col-lg-4 -->
             </div>
-            <!-- /.row -->
-            <div class="row">
+                <div class="row">
                 <!-- /.col-lg-4 -->
                 <div class="col-lg-4">
                     <div class="panel panel-green">
                         <div class="panel-heading">
-                            Opportunities
+                            Socioculturel
                         </div>
                         <div class="panel-body">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
@@ -148,11 +107,50 @@
                         </div>
                     </div>
                 </div>
+                
                 <!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <div class="panel panel-red rond">
+                        <div class="panel-heading">
+                            Titre
+                        </div>
+                        <div class="panel-body rond">
+                            <p>Titre du diagramme PESTEL</p>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-lg-4">
                     <div class="panel panel-red">
                         <div class="panel-heading">
-                            Threats
+                            Technologique
+                        </div>
+                        <div class="panel-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
+                        </div>
+                        <div class="panel-footer">
+                            Panel Footer
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="panel panel-red">
+                        <div class="panel-heading">
+                            Ecologique
+                        </div>
+                        <div class="panel-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
+                        </div>
+                        <div class="panel-footer">
+                            Panel Footer
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-offset-4 col-lg-4">
+                    <div class="panel panel-red">
+                        <div class="panel-heading">
+                            Légal
                         </div>
                         <div class="panel-body">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
@@ -164,10 +162,10 @@
                 </div>
                 <!-- /.col-lg-4 -->
             </div>
-            
-            
-            
-        
+            <div class="row">               
+                    <button type="button" class="btn btn-secondary pull-left" onclick="window.location='construire_pestel.php';">Modifier le PESTEL</button>  
+                   <button type="button" class="btn btn-info pull-right ">Valider</button>                  
+            </div>
             <!-- /.row -->
         </div>
         <!-- /#page-wrapper -->
@@ -188,5 +186,7 @@
     <script src="../dist/js/sb-admin-2.js"></script>
 
 </body>
+<style>
 
+</style>
 </html>
