@@ -50,7 +50,7 @@
           
 
            <?php include('navbar.inc.php'); ?> 
-
+            <!-- /.navbar-static-side -->
         </nav>
 
         <div id="page-wrapper">
