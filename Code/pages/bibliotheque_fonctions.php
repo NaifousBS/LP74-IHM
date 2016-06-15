@@ -2,30 +2,15 @@
 
 
 
-/*
-ID_PRODUIT          -> 0
-NOM_PDT             -> 1
-DESC_PDT            -> 2
-PRIX                -> 3
-CHEMIN_IMG_PDT      -> 4
-STOCK               -> 5
-LIEN_EXERCICE       -> 6
-MUSCLE_CONCERNE     -> 7
-*/
 
 
 
 
 
-
-
-// Fonction appelé dans les pages: machines.php; poids_libres.php; complementd_alimentaires.php
-// Liste tous les produits en fonction de la catégorie : 1 --> Machines ; 2 --> Poids libres ; 3 --> Complements alimentaires
-// Apres avoir lister tous les produits, les ajoute dans un tableau puis renvoie le tableau
 function listerProduits($cnn,$id)
 {
     $req="  SELECT *
-            FROM `produit`
+            FROM `ichikawa`
             WHERE `ID_CATEGORIE` = ".$id.";";
     $reponse= $cnn->prepare($req);
     $liste =array();
@@ -41,8 +26,7 @@ function listerProduits($cnn,$id)
     return $liste;
 }
 
-// Fonction appelé dans les pages: machines.php; poids_libres.php; complementd_alimentaires.php
-// Affiche les informations sur le produit passé en paramètre dans les pages concernées
+
 function affichageProduit($cnn,$produit,$page) // affiche le titre 
 {
     echo 
