@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS UTILISATEUR;
+
 
 DROP TABLE IF EXISTS ICHIKAWA;
 
@@ -8,21 +8,8 @@ DROP TABLE IF EXISTS DONNEES;
 
 DROP TABLE IF EXISTS SWOT;
 
-USE MLR4;
-# -----------------------------------------------------------------------------
-#       TABLE : UTILISATEUR
-# -----------------------------------------------------------------------------
+USE lp74_ihm;
 
-CREATE TABLE IF NOT EXISTS UTILISATEUR
- (
-   ID_UTILISATEUR CHAR(32) NOT NULL  ,
-   NOM VARCHAR(128) NOT NULL  ,
-   PRENOM VARCHAR(128) NOT NULL  ,
-   ADRESSE_MAIL CHAR(255) NOT NULL  ,
-   MOT_DE_PASSE VARCHAR(128) NOT NULL  
-   , PRIMARY KEY (ID_UTILISATEUR) 
- ) 
- comment = "";
 
 # -----------------------------------------------------------------------------
 #       TABLE : ICHIKAWA
@@ -30,19 +17,12 @@ CREATE TABLE IF NOT EXISTS UTILISATEUR
 
 CREATE TABLE IF NOT EXISTS ICHIKAWA
  (
-   ID_ICHIKAWA CHAR(32) NOT NULL  ,
-   ID_UTILISATEUR CHAR(32) NOT NULL  
+   ID_ICHIKAWA CHAR(32) NOT NULL  
    , PRIMARY KEY (ID_ICHIKAWA) 
  ) 
  comment = "";
 
-# -----------------------------------------------------------------------------
-#       INDEX DE LA TABLE ICHIKAWA
-# -----------------------------------------------------------------------------
 
-
-CREATE  INDEX I_FK_ICHIKAWA_UTILISATEUR
-     ON ICHIKAWA (ID_UTILISATEUR ASC);
 
 # -----------------------------------------------------------------------------
 #       TABLE : PESTEL
@@ -50,19 +30,11 @@ CREATE  INDEX I_FK_ICHIKAWA_UTILISATEUR
 
 CREATE TABLE IF NOT EXISTS PESTEL
  (
-   ID_PESTEL CHAR(32) NOT NULL  ,
-   ID_UTILISATEUR CHAR(32) NOT NULL  
+   ID_PESTEL CHAR(32) NOT NULL  
    , PRIMARY KEY (ID_PESTEL) 
  ) 
  comment = "";
 
-# -----------------------------------------------------------------------------
-#       INDEX DE LA TABLE PESTEL
-# -----------------------------------------------------------------------------
-
-
-CREATE  INDEX I_FK_PESTEL_UTILISATEUR
-     ON PESTEL (ID_UTILISATEUR ASC);
 
 # -----------------------------------------------------------------------------
 #       TABLE : DONNEES
@@ -101,34 +73,15 @@ CREATE  INDEX I_FK_DONNEES_PESTEL
 
 CREATE TABLE IF NOT EXISTS SWOT
  (
-   ID_SWOT CHAR(32) NOT NULL  ,
-   ID_UTILISATEUR CHAR(32) NOT NULL  
+   ID_SWOT CHAR(32) NOT NULL 
    , PRIMARY KEY (ID_SWOT) 
  ) 
  comment = "";
-
-# -----------------------------------------------------------------------------
-#       INDEX DE LA TABLE SWOT
-# -----------------------------------------------------------------------------
-
-
-CREATE  INDEX I_FK_SWOT_UTILISATEUR
-     ON SWOT (ID_UTILISATEUR ASC);
 
 
 # -----------------------------------------------------------------------------
 #       CREATION DES REFERENCES DE TABLE
 # -----------------------------------------------------------------------------
-
-
-ALTER TABLE ICHIKAWA 
-  ADD FOREIGN KEY FK_ICHIKAWA_UTILISATEUR (ID_UTILISATEUR)
-      REFERENCES UTILISATEUR (ID_UTILISATEUR) ;
-
-
-ALTER TABLE PESTEL 
-  ADD FOREIGN KEY FK_PESTEL_UTILISATEUR (ID_UTILISATEUR)
-      REFERENCES UTILISATEUR (ID_UTILISATEUR) ;
 
 
 ALTER TABLE DONNEES 
@@ -145,8 +98,4 @@ ALTER TABLE DONNEES
   ADD FOREIGN KEY FK_DONNEES_PESTEL (ID_PESTEL)
       REFERENCES PESTEL (ID_PESTEL) ;
 
-
-ALTER TABLE SWOT 
-  ADD FOREIGN KEY FK_SWOT_UTILISATEUR (ID_UTILISATEUR)
-      REFERENCES UTILISATEUR (ID_UTILISATEUR) ;
 
