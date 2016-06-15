@@ -57,7 +57,7 @@
                     <input type="text" class="form-control" id="inputPol">
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-primary col-md-3" onclick="addPol()">Ajouter</button>  
+                   <button type="button" class="btn btn-primary col-md-3" onclick="addOption('inputPol','listPol')">Ajouter</button>  
                 </div>
             </div>
             <div class="row">
@@ -72,7 +72,7 @@
                     
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-danger col-md-3" onclick="delPol()">Supprimer</button>  
+                   <button type="button" class="btn btn-danger col-md-3" onclick="delOption('listPol')">Supprimer</button>  
                 </div>
             </div>
             
