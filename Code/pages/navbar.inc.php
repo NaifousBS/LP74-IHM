@@ -9,7 +9,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">Environnement d'étude stratégique </a>
+        <a class="navbar-brand pull-left" href="index.php">Environnement d'étude stratégique </a>
     </div>
     <!-- /.navbar-header -->
 
