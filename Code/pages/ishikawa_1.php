@@ -72,30 +72,21 @@
                 </div>
             </div>
             
-            <div class="row">
-                <div class="col-lg-4 form-group">
-                    <label for="listObjectifs">Objectifs:</label>
-                </div>
-                <div class="col-sm-1">
-                    <div class="row form-group ">
-                       
-                    </div>
-                    <div class="row form-group ">
-                       
-                    </div>
-                </div>
-                <div class="col-lg-4 form-group">
-                    <label for="listNoeuds">Arêtes niveau 1:</label>
-                </div>
-            </div>
+            
             <div class="row">
             
             <div class="col-lg-3 form-group">
-                <input type="text" class="form-control col-lg-3" id="inputStrength">
+                <input type="text" class="form-control col-lg-3" id="inputObj" placeholder="Ajouter un nouvel objectif">
             </div>
             <div class="col-lg-1 form-group">
                  <button type="button" class="btn btn-success pull-right"> + </button> 
             </div>
+                <div class="col-sm-1">
+                    
+                </div>
+                <div class="col-lg-4 form-group">
+                    <label for="listNoeuds">Arêtes niveau 1:</label>
+                </div>
             
             </div>
             <div class="row">

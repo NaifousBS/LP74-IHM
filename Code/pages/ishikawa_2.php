@@ -68,34 +68,22 @@
             </div>
             <div class="row form-group">
                 <div class="col-lg-8 ">
-                    <p>Sélectionnez un objectif et une arête de niveau 1, puis cliquez sur le bouton >> pour ajouter une arête de niveau 2 </p>
+                    <p>Sélectionnez un objectif et une arête de niveau 1, puis cliquez sur le bouton Ajouter pour ajouter une arête de niveau 2 </p>
                 </div>
             </div>
             
-            <div class="row">
-                <div class="col-lg-4 form-group">
-                    <label for="listObjectifs">Objectifs:</label>
-                </div>
-                <div class="col-sm-1">
-                    <div class="row form-group ">
-                       
-                    </div>
-                    <div class="row form-group ">
-                       
-                    </div>
-                </div>
-                <div class="col-lg-4 form-group">
-                    <label for="listNoeuds">Arêtes:</label>
-                </div>
-            </div>
+           
             <div class="row">
             
             <div class="col-lg-3 form-group">
-                <input type="text" class="form-control col-lg-3" id="inputStrength">
+                <input type="text" class="form-control col-lg-3" id="inputObj" placeholder="Ajouter un nouvel objectif">
             </div>
             <div class="col-lg-1 form-group">
                  <button type="button" class="btn btn-success pull-right"> + </button> 
             </div>
+                <div class="col-lg-4 form-group">
+                    <label for="listNoeuds">Arêtes:</label>
+                </div>
             
             </div>
             <div class="row">
@@ -108,14 +96,7 @@
                         <option>text5</option>
                     </select>
                 </div>
-                <div class="col-sm-1">
-                    <div class="row form-group ">
-                        <button type="button" class="btn btn-primary col-sm-12"> >> </button> <br/>
-                    </div>
-                    <div class="row form-group ">
-                        <button type="button" class="btn btn-danger col-sm-12"> << </button> 
-                    </div>
-                </div>
+                
                 <div class="col-lg-4 form-group">
                     <select  class="form-control" name="listNoeuds" size="20">
                         <option class="gras">text1</option>
@@ -125,8 +106,16 @@
                         <option>&nbsp;&nbsp;&nbsp;text5</option>
                     </select>
                 </div>
+                <div class="col-sm-1">
+                    <div class="row form-group ">
+                        <button type="button" class="btn btn-primary col-sm-12"> Ajouter </button> <br/>
+                    </div>
+                    <div class="row form-group ">
+                        <button type="button" class="btn btn-danger col-sm-12"> Retirer </button> 
+                    </div>
+                </div>
             </div>
-            <div class="row col-lg-9 form-group">
+            <div class="row col-lg-8 form-group">
                 <button type="button" class="btn btn-info pull-right" onclick="window.location='index.php';"> Valider </button> <br/>
             </div>
             
