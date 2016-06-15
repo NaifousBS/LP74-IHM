@@ -69,16 +69,18 @@
                     </div>
                 </div>
 
+                <form action="traitement_creationProjet.php" method="post">
                 <div class="row" style="margin-top: 20px">
                     
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" id="nomProjet" placeholder="Nom de votre projet"/>
+                            <input type="text" class="form-control" id="nomProjet" name="nomProjet" placeholder="Nom de votre projet"/>
                         </div>
                         <div class="col-sm-4">
-                            <button type="button" class="btn btn-primary" onclick="window.location='construire_swot.php'">Valider</button>
+                            <input type="submit" class="btn btn-primary" value="Valider" />
                         </div>
                     
                 </div>
+                </form>
                 <div class="row">
                     <div class="col-sm-8">
                         <h2><span class="label label-primary">ou chargez un projet dans la liste</span></h2>                        

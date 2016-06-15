@@ -1,3 +1,25 @@
+<?php
+require_once 'connexion_bdd.php';
+?>
+
+<?php
+/*
+if(!empty($_POST)){
+  $req = $bdd->prepare('INSERT INTO donnees(id_donnees, id_ichikawa, id_swot, id_pestel, intitulé, contenu, noeud) VALUES(:id_donnees, :id_ichikawa, :id_swot, :id_pestel, :intitulé, :contenu, :noeud)');
+    $req->execute(array(
+        'id_donnees' => $id_donnees,
+        'id_ichikawa' => $id_ichikawa,
+        'id_swot' => $id_swot,
+        'id_pestel' => $id_pestel,
+        'intitulé' => $intitulé,
+        'contenu' => $contenu,
+        'noeud' => $noeud
+        ));
+
+    echo 'Ajout du PESTEL!';  
+    */
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,7 +70,7 @@
             </div>
             <!-- /.row -->
             <div class="row">
-                
+
                 <!-- /.col-lg-4 -->
                 <div class="col-lg-4">
                     <div class="panel panel-yellow">
