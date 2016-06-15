@@ -54,7 +54,7 @@
             
             <div class="row">
                 <div class="col-lg-6 form-group">
-                    <input type="text" class="form-control" id="inputPol">
+                    <input type="text" class="form-control" id="inputPol" placeholder="Ajouter un critère">
                 </div>
                 <div class="col-md-5">
                    <button type="button" class="btn btn-primary col-md-3" onclick="addOption('inputPol','listPol')">Ajouter</button>  
@@ -62,12 +62,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-6 form-group">
-                    <select id="listPol" class="form-control" name="listStrength" size="5">
-                        <option>text1</option>
-                        <option>text2</option>
-                        <option>text3</option>
-                        <option>text4</option>
-                        <option>text5</option>
+                    <select id="listPol" class="form-control" size="5">
                     </select>
                     
                 </div>
@@ -84,25 +79,20 @@
             </div>
             <div class="row">
                 <div class="col-lg-6 form-group">
-                    <input type="text" class="form-control" id="inputStrength">
+                    <input type="text" class="form-control" id="inputEcon" placeholder="Ajouter un critère">
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-primary col-md-3">Ajouter</button>  
+                   <button type="button" class="btn btn-primary col-md-3" onclick="addOption('inputEcon','listEcon')">Ajouter</button>  
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-6 form-group">
-                    <select  class="form-control" name="listStrength" size="5">
-                        <option>text1</option>
-                        <option>text2</option>
-                        <option>text3</option>
-                        <option>text4</option>
-                        <option>text5</option>
+                    <select id="listEcon" class="form-control" size="5">
                     </select>
                     
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-danger col-md-3">Supprimer</button>  
+                   <button type="button" class="btn btn-danger col-md-3" onclick="delOption('listEcon')">Supprimer</button>  
                 </div>
             </div>
             
@@ -112,25 +102,20 @@
             </div>
             <div class="row">
                 <div class="col-lg-6 form-group">
-                    <input type="text" class="form-control" id="inputStrength">
+                    <input type="text" class="form-control" id="inputSoc" placeholder="Ajouter un critère">
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-primary col-md-3">Ajouter</button>  
+                   <button type="button" class="btn btn-primary col-md-3" onclick="addOption('inputSoc','listSoc')">Ajouter</button>  
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-6 form-group">
-                    <select  class="form-control" name="listStrength" size="5">
-                        <option>text1</option>
-                        <option>text2</option>
-                        <option>text3</option>
-                        <option>text4</option>
-                        <option>text5</option>
+                    <select id="listSoc" class="form-control" size="5">
                     </select>
                     
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-danger col-md-3">Supprimer</button>  
+                   <button type="button" class="btn btn-danger col-md-3" onclick="delOption('listSoc')">Supprimer</button>  
                 </div>
             </div>
             
@@ -140,25 +125,20 @@
             </div>
             <div class="row">
                 <div class="col-lg-6 form-group">
-                    <input type="text" class="form-control" id="inputStrength">
+                    <input type="text" class="form-control" id="inputTec" placeholder="Ajouter un critère">
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-primary col-md-3">Ajouter</button>  
+                   <button type="button" class="btn btn-primary col-md-3" onclick="addOption('inputTec','listTec')">Ajouter</button>  
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-6 form-group">
-                    <select  class="form-control" name="listStrength" size="5">
-                        <option>text1</option>
-                        <option>text2</option>
-                        <option>text3</option>
-                        <option>text4</option>
-                        <option>text5</option>
+                    <select id="listTec" class="form-control" size="5">
                     </select>
                     
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-danger col-md-3">Supprimer</button>  
+                   <button type="button" class="btn btn-danger col-md-3" onclick="delOption('listTec')">Supprimer</button>  
                 </div>
             </div>
 
@@ -168,25 +148,20 @@
             </div>
             <div class="row">
                 <div class="col-lg-6 form-group">
-                    <input type="text" class="form-control" id="inputStrength">
+                    <input type="text" class="form-control" id="inputEcol" placeholder="Ajouter un critère">
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-primary col-md-3">Ajouter</button>  
+                   <button type="button" class="btn btn-primary col-md-3" onclick="addOption('inputEcol','listEcol')">Ajouter</button>  
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-6 form-group">
-                    <select  class="form-control" name="listStrength" size="5">
-                        <option>text1</option>
-                        <option>text2</option>
-                        <option>text3</option>
-                        <option>text4</option>
-                        <option>text5</option>
+                    <select id="listEcol" class="form-control" size="5">
                     </select>
                     
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-danger col-md-3">Supprimer</button>  
+                   <button type="button" class="btn btn-danger col-md-3" onclick="delOption('listEcol')">Supprimer</button>  
                 </div>
             </div>
 
@@ -196,25 +171,20 @@
             </div>
             <div class="row">
                 <div class="col-lg-6 form-group">
-                    <input type="text" class="form-control" id="inputStrength">
+                    <input type="text" class="form-control" id="inputLeg" placeholder="Ajouter un critère">
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-primary col-md-3">Ajouter</button>  
+                   <button type="button" class="btn btn-primary col-md-3" onclick="addOption('inputLeg','listLeg')">Ajouter</button>  
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-6 form-group">
-                    <select  class="form-control" name="listStrength" size="5">
-                        <option>text1</option>
-                        <option>text2</option>
-                        <option>text3</option>
-                        <option>text4</option>
-                        <option>text5</option>
+                    <select id="listLeg" class="form-control" size="5">
                     </select>
                     
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-danger col-md-3">Supprimer</button>  
+                   <button type="button" class="btn btn-danger col-md-3" onclick="delOption('listLeg')">Supprimer</button>  
                 </div>
             </div>
 
