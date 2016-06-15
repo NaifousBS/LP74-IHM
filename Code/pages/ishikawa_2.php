@@ -38,13 +38,8 @@
 <body>
 
     <div id="wrapper">
-
-                
-
-            <?php include('navbar.inc.php'); ?> 
-            <!-- /.navbar-static-side -->
-        </nav>
         
+            <?php include('navbar.inc.php'); ?> 
 
         <div id="page-wrapper">
             <div class="row">

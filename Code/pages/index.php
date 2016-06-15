@@ -42,11 +42,7 @@
 
     
     <div id="wrapper">
-            
-
             <?php include('navbar.inc.php'); ?> 
-            
-        </nav>
 
         <div id="page-wrapper">
             <div class="row">
