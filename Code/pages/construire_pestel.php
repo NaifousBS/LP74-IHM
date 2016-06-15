@@ -36,10 +36,6 @@
 
     <div id="wrapper">
 
-        
-
-            
-
             <?php include('navbar.inc.php'); ?> 
 
         <div id="page-wrapper">
@@ -58,15 +54,15 @@
             
             <div class="row">
                 <div class="col-lg-6 form-group">
-                    <input type="text" class="form-control" id="inputStrength">
+                    <input type="text" class="form-control" id="inputPol">
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-primary col-md-3">Ajouter</button>  
+                   <button type="button" class="btn btn-primary col-md-3" onclick="addPol()">Ajouter</button>  
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-6 form-group">
-                    <select  class="form-control" name="listStrength" size="5">
+                    <select id="listPol" class="form-control" name="listStrength" size="5">
                         <option>text1</option>
                         <option>text2</option>
                         <option>text3</option>
@@ -76,7 +72,7 @@
                     
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-danger col-md-3">Supprimer</button>  
+                   <button type="button" class="btn btn-danger col-md-3" onclick="delPol()">Supprimer</button>  
                 </div>
             </div>
             
@@ -247,6 +243,9 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
+
+    <!-- Script IHM -->
+    <script src="../js/monScript.js"></script>
 
 </body>
 
