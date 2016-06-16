@@ -101,37 +101,37 @@ include('bibliotheque_fonctions.php');
 
         }
     
-                            $liste=listerNoeuds1($connexion,1);
-                            if(!empty($liste))
-                            {
-                                echo ' "causes":[';
-                               foreach ($liste as $noeud1) 
-                                {
-                                   echo ' { "text":"'.$noeud1[1].'", "size":14, "weight":"Bold"';
-                                    
-                                   $listeNoeud2 = listerNoeuds2AvecParent($connexion,1, $noeud1[0]);
-                                   
-                                   
-                                    if(!empty($listeNoeud2))
-                                    {
-                                        echo ', 
-                                        "causes":[';
-                                        
-                                        foreach ($listeNoeud2 as $noeud2) 
-                                        {
-                                           echo' { "text":"'.$noeud2[1].'" },';
-                                        }
-                                        
-                                        echo ']';
+        $liste=listerNoeuds1($connexion,1);
+        if(!empty($liste))
+        {
+            echo ' "causes":[';
+           foreach ($liste as $noeud1) 
+            {
+               echo ' { "text":"'.$noeud1[1].'", "size":14, "weight":"Bold"';
 
-                                    }
-                                   
-                                   echo' 
-                                    },';
-                                }
-                                
-                                echo ' ] ';
-                            }
+               $listeNoeud2 = listerNoeuds2AvecParent($connexion,1, $noeud1[0]);
+
+
+                if(!empty($listeNoeud2))
+                {
+                    echo ', 
+                    "causes":[';
+
+                    foreach ($listeNoeud2 as $noeud2) 
+                    {
+                       echo' { "text":"'.$noeud2[1].'" },';
+                    }
+
+                    echo ']';
+
+                }
+
+               echo' 
+                },';
+            }
+
+            echo ' ] ';
+        }
                             
                         
         

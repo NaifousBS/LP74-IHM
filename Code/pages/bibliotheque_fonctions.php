@@ -93,6 +93,25 @@ function listerNoeuds0($cnn,$id)
     return $liste;
 }
 
+function listerSwot($cnn,$idSwot,$intitule)
+{
+    $req="  SELECT ID_DONNEES,CONTENU FROM `donnees` 
+            WHERE ID_SWOT = ".$idSwot."
+            AND INTITULÉ LIKE '".$intitule."' ";
+    $reponse= $cnn->prepare($req);
+    
+    $liste =array();
+    if($reponse->execute())
+    {
+         while ($donnees = $reponse->fetch())
+        {
+            array_push($liste, array($donnees['ID_DONNEES'],$donnees['CONTENU']));
+        }
+    }
+   
+    return $liste;
+}
+
 
 
 
