@@ -59,15 +59,38 @@ include('bibliotheque_fonctions.php');
             {
                 delOption('listeForce');
             }
-            /*
+            
             else if(msg.substring(1, 3) == 3)
             {
-                addOptionFromList('listNoeuds','listObjectifs');
-            }*/
+                document.getElementById('inputWeakness').value='';
+                $("#listeFaiblesse").append(msg.substring(3));
+            }
+            else if(msg.substring(1, 3) == 4)
+            {
+                delOption('listeFaiblesse');
+            }
+            else if(msg.substring(1, 3) == 5)
+            {
+                document.getElementById('inputOpportunities').value='';
+                $("#listeOpportunite").append(msg.substring(3));
+            }
+            else if(msg.substring(1, 3) == 6)
+            {
+                delOption('listeOpportunite');
+            }
+            else if(msg.substring(1, 3) == 7)
+            {
+                document.getElementById('inputThreat').value='';
+                $("#listeMenace").append(msg.substring(3));
+            }
+            else if(msg.substring(1, 3) == 8)
+            {
+                delOption('listeMenace');
+            }
             
                 
         
-        alert( "Data Saved: " + msg );
+        //alert( "Data Saved: " + msg );
         });
     });
 });
@@ -100,15 +123,10 @@ include('bibliotheque_fonctions.php');
             
             <div class="row">
                 <div class="col-lg-6 form-group">
-                 <!--   <input type="text" class="form-control" id="inputStrength"> -->
-                    
                     <input id="inputStrength" name="inputStrength" type="text" class="form-control" placeholder="Ajouter une nouvelle force">
-                    
-                    
                 </div>
                 <div class="col-md-5">
                      <input type="submit" class="btn btn-primary col-md-3" value="Ajouter" onclick="majInputType('AjoutForce');" />
-                <!--    <button type="button" class="btn btn-primary col-md-3">Ajouter</button>   -->
                 </div>
             </div>
             <div class="row">
@@ -118,9 +136,9 @@ include('bibliotheque_fonctions.php');
                             $liste=listerSwot($connexion,$_SESSION['id_swot'],'Force');
                             if(!empty($liste))
                             {
-                               foreach ($liste as $force) 
+                               foreach ($liste as $donnee) 
                                 {
-                                    affichage($connexion,$force);
+                                    affichage($connexion,$donnee);
                                 }
                             }
                             
@@ -138,85 +156,104 @@ include('bibliotheque_fonctions.php');
             
             <!-- Weaknesses -->
             <div class="row">
-                <label for="inputStrength">Weaknesses:</label>
+                <label for="inputStrength">Faiblesses:</label>
             </div>
+           
             <div class="row">
                 <div class="col-lg-6 form-group">
-                    <input type="text" class="form-control" id="inputStrength">
+                    <input id="inputWeakness" name="inputWeakness" type="text" class="form-control" placeholder="Ajouter une nouvelle faiblesse">
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-primary col-md-3">Ajouter</button>  
+                     <input type="submit" class="btn btn-primary col-md-3" value="Ajouter" onclick="majInputType('AjoutFaiblesse');" />
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-6 form-group">
-                    <select  class="form-control" name="listStrength" size="5">
-                        <option>text1</option>
-                        <option>text2</option>
-                        <option>text3</option>
-                        <option>text4</option>
-                        <option>text5</option>
+                    <select id ="listeFaiblesse" class="form-control" name="listeFaiblesse" size="5" onchange="selectOnChange('listeFaiblesse','inputFaiblesseSelect')">
+                     <?php
+                            $liste=listerSwot($connexion,$_SESSION['id_swot'],'Faiblesse');
+                            if(!empty($liste))
+                            {
+                               foreach ($liste as $donnee) 
+                                {
+                                    affichage($connexion,$donnee);
+                                }
+                            }
+                            
+                        ?>
                     </select>
                     
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-danger col-md-3">Supprimer</button>  
+                   <input type="submit" class="btn btn-danger col-md-3" value="Supprimer" onclick="majInputType('SupprFaiblesse');" />
                 </div>
             </div>
             
              <!-- Opportunities -->
             <div class="row">
-                <label for="inputStrength">Opportunities:</label>
+                <label for="inputStrength">Opportunités:</label>
             </div>
             <div class="row">
                 <div class="col-lg-6 form-group">
-                    <input type="text" class="form-control" id="inputStrength">
+                    <input id="inputOpportunities" name="inputOpportunities" type="text" class="form-control" placeholder="Ajouter une nouvelle opportunité">
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-primary col-md-3">Ajouter</button>  
+                     <input type="submit" class="btn btn-primary col-md-3" value="Ajouter" onclick="majInputType('AjoutOpportunite');" />
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-6 form-group">
-                    <select  class="form-control" name="listStrength" size="5">
-                        <option>text1</option>
-                        <option>text2</option>
-                        <option>text3</option>
-                        <option>text4</option>
-                        <option>text5</option>
+                   <select id ="listeOpportunite" class="form-control" name="listeOpportunite" size="5" onchange="selectOnChange('listeOpportunite','inputOpportuniteSelect')">
+                     <?php
+                            $liste=listerSwot($connexion,$_SESSION['id_swot'],'Opportunite');
+                            if(!empty($liste))
+                            {
+                               foreach ($liste as $donnee) 
+                                {
+                                    affichage($connexion,$donnee);
+                                }
+                            }
+                            
+                        ?>
                     </select>
                     
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-danger col-md-3">Supprimer</button>  
+                   <input type="submit" class="btn btn-danger col-md-3" value="Supprimer" onclick="majInputType('SupprOpportunite');" /> 
                 </div>
             </div>
             
              <!-- Threats -->
             <div class="row">
-                <label for="inputStrength">Threats:</label>
+                <label for="inputStrength">Menaces:</label>
             </div>
             <div class="row">
                 <div class="col-lg-6 form-group">
-                    <input type="text" class="form-control" id="inputStrength">
+                    <input id="inputThreat" name="inputThreat" type="text" class="form-control" placeholder="Ajouter une nouvelle menace">
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-primary col-md-3">Ajouter</button>  
+                     <input type="submit" class="btn btn-primary col-md-3" value="Ajouter" onclick="majInputType('AjoutMenace');" />
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-6 form-group">
-                    <select  class="form-control" name="listStrength" size="5">
-                        <option>text1</option>
-                        <option>text2</option>
-                        <option>text3</option>
-                        <option>text4</option>
-                        <option>text5</option>
+                    <select id ="listeMenace" class="form-control" name="listeMenace" size="5" onchange="selectOnChange('listeMenace','inputMenaceSelect')">
+                     <?php
+                            $liste=listerSwot($connexion,$_SESSION['id_swot'],'Menace');
+                            if(!empty($liste))
+                            {
+                               foreach ($liste as $donnee) 
+                                {
+                                    affichage($connexion,$donnee);
+                                }
+                            }
+                            
+                        ?>
                     </select>
                     
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-danger col-md-3">Supprimer</button>  
+                    <input type="submit" class="btn btn-danger col-md-3" value="Supprimer" onclick="majInputType('SupprMenace');" />
                 </div>
             </div>
             <div class="row">
@@ -228,6 +265,9 @@ include('bibliotheque_fonctions.php');
         </div>
         <input id="inputTypeAction" name="inputTypeAction" type="hidden" value=""/>
         <input id="inputForceSelect" name="inputForceSelect" type="hidden" value=""/>
+        <input id="inputFaiblesseSelect" name="inputFaiblesseSelect" type="hidden" value=""/>
+        <input id="inputOpportuniteSelect" name="inputOpportuniteSelect" type="hidden" value=""/>
+        <input id="inputMenaceSelect" name="inputMenaceSelect" type="hidden" value=""/>
 
     </div>
     
