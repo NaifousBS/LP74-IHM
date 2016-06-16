@@ -9,7 +9,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand pull-left" href="index.php">Environnement d'étude stratégique </a>
+        <a class="navbar-brand pull-left" href="index.php" style="color: blue"><i class="fa fa-bar-chart" aria-hidden="true"></i> Environnement d'étude stratégique </a>
     </div>
     <!-- /.navbar-header -->
 
@@ -21,10 +21,10 @@
             <ul class="nav" id="side-menu">
 
                 <li>
-                    <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Accueil</a>
+                    <a href="index.php"><i class="fa fa-home" aria-hidden="true"></i> Accueil</a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-wrench fa-fw"></i>SWOT<span class="fa arrow"></span></a>
+                    <a href="#"><i class="fa fa-wrench fa-fw"></i> SWOT<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
 
                         <li>
@@ -39,7 +39,7 @@
                 </li>
 
                 <li>
-                    <a href="#"><i class="fa fa-wrench fa-fw"></i>PESTEL<span class="fa arrow"></span></a>
+                    <a href="#"><i class="fa fa-wrench fa-fw"></i> PESTEL<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
 
                         <li>
@@ -53,7 +53,7 @@
                     <!-- /.nav-second-level -->
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-files fa-fw"></i>ISHIKAWA<span class="fa arrow"></span></a>
+                    <a href="#"><i class="fa fa-line-chart" aria-hidden="true"></i> ISHIKAWA<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
 
                         <li>

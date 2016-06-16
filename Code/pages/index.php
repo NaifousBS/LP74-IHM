@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>ISHIKAWA - Outil d'environnement d'étude stratégique</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -47,7 +47,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-8">
-                    <h1 class="page-header">Bienvenue dans l'outil de construction de diagramme ISHIKAWA</h1>
+                    <h1 class="page-header" style="font-size: 20px; color: blue"><i class="fa fa-bar-chart" aria-hidden="true"></i> Bienvenue dans votre outil d'environnement d'étude stratégique <i class="fa fa-line-chart" aria-hidden="true"></i></h1>
                 </div>
             </div>
 
