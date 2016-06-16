@@ -6,19 +6,7 @@ if($_GET)
     $type=$_GET['inputTypeAction'];
     $paramishi = 1;
 
-    if($type == 'AjoutArete')
-    {
-        $idObj=$_GET['inputObjSelect'];
-        $req=" UPDATE donnees 
-                SET NOEUD=1,NOEUDParent=0
-                WHERE ID_DONNEES = ".$idObj;
-        
-        $stmt = $connexion->prepare($req);
-        $stmt->execute();
-        
-        echo "2 ";
-    }
-    else if($type == 'AjoutObj')
+    if($type == 'AjoutObj')
     {
         $obj=$_GET['ajoutObj'];
         
@@ -33,6 +21,19 @@ if($_GET)
         $lastIdDonnee=recupDerniereCommande($connexion);
         echo "1 <option value='".$lastIdDonnee."'>".$obj."</option>";
     }
+    else if($type == 'AjoutArete')
+    {
+        $idObj=$_GET['inputObjSelect'];
+        $req=" UPDATE donnees 
+                SET NOEUD=1,NOEUDParent=0
+                WHERE ID_DONNEES = ".$idObj;
+        
+        $stmt = $connexion->prepare($req);
+        $stmt->execute();
+        
+        echo "2 ";
+    }
+   
     
 
     else if($type == 'SupprArete')
@@ -76,7 +77,24 @@ if($_GET)
         
     }
     
+    else if($type == 'Noeud1Changed')
+    {
+       $idNoeud1=$_GET['inputNoeud1Select'];
+        $liste=listerNoeud2($connexion,1,$idNoeud1);
+        $retour="";
         
+        if(!empty($liste))
+        {
+            foreach ($liste as $noeud2) 
+            {
+                //affichage($connexion,$noeud1);
+                $retour=$retour.'<option value="'.$noeud2[0].'">'.$noeud2[1].'</option>;';
+            }
+        }
+       
+        echo "6 ".$retour;
+        
+    }   
     
     
     
@@ -94,6 +112,24 @@ function recupDerniereCommande($cnn)
     
     return $donnees[0]; 
 
+}
+function listerNoeud2($cnn,$id, $idParent)
+{
+    $req="  SELECT ID_DONNEES,CONTENU FROM donnees WHERE NOEUD = 2 
+            AND ID_ICHIKAWA = ".$id."
+            AND NOEUDPARENT =".$idParent;
+    $reponse= $cnn->prepare($req);
+    
+    $liste =array();
+    if($reponse->execute())
+    {
+         while ($donnees = $reponse->fetch())
+        {
+            array_push($liste, array($donnees['ID_DONNEES'],$donnees['CONTENU']));
+        }
+    }
+   
+    return $liste;
 }
 
 

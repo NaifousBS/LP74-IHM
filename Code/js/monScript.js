@@ -32,6 +32,12 @@ function selectOnChange(idSelect,idInput)
      document.getElementById(idInput).value = document.getElementById(idSelect).value;
 }
 
+function envoiForm()
+{
+    //alert(1);
+    $('form').submit();
+}
+
 function majInputType(type)
 {
     document.getElementById('inputTypeAction').value=type; 

@@ -72,9 +72,17 @@ include('bibliotheque_fonctions.php');
             {
                 addOptionFromList('listNoeuds2','listObjectifs');
             }
+            else if(msg.substring(1, 3) == 6)
+            {
+                 //var arrayOfStrings = msg.substring(1, 3).split(';');
+                //alert(msg.substring(3));
+               
+                $("#listNoeuds2").empty();
+                $("#listNoeuds2").append(msg.substring(3));
+
+            }
+           
             
-                
-        
         //alert( "Data Saved: " + msg );
         });
     });
@@ -107,11 +115,11 @@ include('bibliotheque_fonctions.php');
                 <div class="row">
 
                 <div class="col-lg-2 form-group">
-                  <!--  <input name="ajoutObj" type="text" class="form-control col-lg-3" id="inputObj" placeholder="Ajouter un objectif"> -->
-                    <label for="listObjectifs">Objectifs:</label>
+                    <input name="ajoutObj" type="text" class="form-control col-lg-3" id="inputObj" placeholder="Ajouter un objectif"> 
+                    <!--<label for="listObjectifs">Objectifs:</label> -->
                 </div>
                 <div class="col-lg-1 form-group">
-                    <!-- <input type="submit" class="btn btn-success pull-right" value="+" onclick="majInputType('AjoutObj');" /> -->
+                     <input type="submit" class="btn btn-success pull-right" value="+" onclick="majInputType('AjoutObj');" /> 
                 </div> 
                 <div class="col-lg-4 form-group">
                     <label for="listNoeuds1">Arêtes niveau 1:</label>
@@ -128,37 +136,32 @@ include('bibliotheque_fonctions.php');
 
                         <?php
                             $liste=listerObjectifs($connexion,1);
-                            if(empty($liste)==true)
+                            if(!empty($liste))
                             {
-                               
-                            }
-                            else
-                            {
-                                foreach ($liste as $objectif) 
+                               foreach ($liste as $objectif) 
                                 {
                                     affichage($connexion,$objectif);
                                 }
                             }
+                           
                         ?>
 
                     </select>
                     </div>
 
                     <div class="col-lg-3 form-group">
-                        <select id ="listNoeuds1" class="form-control" name="listNoeuds" size="20" onchange="selectOnChange('listNoeuds1','inputNoeud1Select')">
+                        <select id ="listNoeuds1" class="form-control" name="listNoeuds" size="20" onchange="selectOnChange('listNoeuds1','inputNoeud1Select');majInputType('Noeud1Changed');envoiForm();">
                          <?php
                                 $liste=listerNoeuds1($connexion,1);
-                                if(empty($liste)==true)
-                                {
-
-                                }
-                                else
+                                if(!empty($liste))
                                 {
                                     foreach ($liste as $noeud1) 
                                     {
                                         affichage($connexion,$noeud1);
                                     }
+
                                 }
+                               
                             ?>
                         </select>
                     </div>
@@ -180,18 +183,16 @@ include('bibliotheque_fonctions.php');
                     <div class="col-lg-3 form-group">
                         <select id="listNoeuds2" class="form-control" name="listNoeuds2" size="20" onchange="selectOnChange('listNoeuds2','inputNoeud2Select')">
                             <?php
-                                $liste=listerNoeuds2($connexion,1);
-                                if(empty($liste)==true)
-                                {
-
-                                }
-                                else
+                               /* $liste=listerNoeuds2($connexion,1);
+                                if(!empty($liste))
                                 {
                                     foreach ($liste as $noeud1) 
                                     {
                                         affichage($connexion,$noeud1);
                                     }
-                                }
+
+                                }*/
+                               
                             ?>
 
                         </select>
