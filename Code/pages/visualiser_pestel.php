@@ -3,7 +3,7 @@ require_once 'connexion_bdd.php';
 ?>
 
 <?php
-/*
+
 if(!empty($_POST)){
   $req = $bdd->prepare('INSERT INTO donnees(id_donnees, id_ichikawa, id_swot, id_pestel, intitulé, contenu, noeud) VALUES(:id_donnees, :id_ichikawa, :id_swot, :id_pestel, :intitulé, :contenu, :noeud)');
     $req->execute(array(
@@ -18,7 +18,7 @@ if(!empty($_POST)){
 
     echo 'Ajout du PESTEL!';  
     
-}*/
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

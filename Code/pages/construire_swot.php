@@ -1,3 +1,8 @@
+<?php
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,7 +41,7 @@
 
     <div id="wrapper">
 
-            <?php include('navbar.inc.php'); ?> 
+        <?php include('navbar.inc.php'); ?> 
 
         <div id="page-wrapper">
             <div class="row">
