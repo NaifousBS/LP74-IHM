@@ -63,7 +63,7 @@
                             <a href="ishikawa_2.php">Choisir arêtes 2</a>
                         </li>
                         <li>
-                            <a href="visualiser_pestel.php">Visualiser</a>
+                            <a href="visualiser_ishikawa.php">Visualiser</a>
                         </li>
 
                     </ul>
