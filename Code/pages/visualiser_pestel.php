@@ -17,8 +17,8 @@ if(!empty($_POST)){
         ));
 
     echo 'Ajout du PESTEL!';  
-    */
-}
+    
+}*/
 ?>
 <!DOCTYPE html>
 <html lang="en">

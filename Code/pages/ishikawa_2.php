@@ -199,7 +199,7 @@ include('bibliotheque_fonctions.php');
                     </div>
                 </div>
                 <div class="row col-lg-10 form-group">
-                    <button type="button" class="btn btn-info pull-right" onclick="window.location='index.php';"> Visualiser </button> <br/>
+                    <button type="button" class="btn btn-info pull-right" onclick="window.location='visualiser_ishikawa.php';"> Visualiser </button> <br/>
                 </div>
 
 
