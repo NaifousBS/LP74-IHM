@@ -112,6 +112,24 @@ function listerSwot($cnn,$idSwot,$intitule)
     return $liste;
 }
 
+function listerPestel($cnn,$idPestel,$intitule)
+{
+    $req="  SELECT ID_DONNEES,CONTENU FROM `donnees` 
+            WHERE ID_PESTEL = ".$idPestel."
+            AND INTITULÉ LIKE '".$intitule."' ";
+    $reponse= $cnn->prepare($req);
+    
+    $liste =array();
+    if($reponse->execute())
+    {
+         while ($donnees = $reponse->fetch())
+        {
+            array_push($liste, array($donnees['ID_DONNEES'],$donnees['CONTENU']));
+        }
+    }
+   
+    return $liste;
+}
 
 
 

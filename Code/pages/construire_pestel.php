@@ -1,5 +1,8 @@
 <?php
+session_start();
 require_once 'connexion_bdd.php';
+include('bibliotheque_fonctions.php');
+
 ?>
 
 
@@ -34,11 +37,89 @@ require_once 'connexion_bdd.php';
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js" ></script>
+    <script>
+    $(document).ready(function(){
+    $("form").on('submit',function(event){
+    event.preventDefault();
+        data = $(this).serialize();
+
+        $.ajax({
+        type: "GET",
+        url: "gestionPestel.php",
+        data: data
+        }).done(function( msg ) {
+            
+            if(msg.substring(1, 3) == 1)
+            {
+                document.getElementById('inputPolitique').value='';
+                $("#listePolitique").append(msg.substring(3));
+            }
+            else if(msg.substring(1, 3) == 2)
+            {
+                delOption('listePolitique');
+            }
+            
+            else if(msg.substring(1, 3) == 3)
+            {
+                document.getElementById('inputEconomique').value='';
+                $("#listeEconomique").append(msg.substring(3));
+            }
+            else if(msg.substring(1, 3) == 4)
+            {
+                delOption('listeEconomique');
+            }
+            else if(msg.substring(1, 3) == 5)
+            {
+                document.getElementById('inputSocioCulturel').value='';
+                $("#listeSocioCulturel").append(msg.substring(3));
+            }
+            else if(msg.substring(1, 3) == 6)
+            {
+                delOption('listeSocioCulturel');
+            }
+            else if(msg.substring(1, 3) == 7)
+            {
+                document.getElementById('inputTechnologique').value='';
+                $("#listeTechnologique").append(msg.substring(3));
+            }
+            else if(msg.substring(1, 3) == 8)
+            {
+                delOption('listeTechnologique');
+            }
+            else if(msg.substring(1, 3) == 9)
+            {
+                document.getElementById('inputEcologique').value='';
+                $("#listeEcologique").append(msg.substring(3));
+            }
+            else if(msg.substring(1, 3) == 10)
+            {
+                delOption('listeEcologique');
+            }
+            else if(msg.substring(1, 3) == 11)
+            {
+                document.getElementById('inputLegal').value='';
+                $("#listeLegal").append(msg.substring(3));
+            }
+            else if(msg.substring(1, 3) == 12)
+            {
+                delOption('listeLegal');
+            }
+            
+                
+        
+        //alert( "Data Saved: " + msg );
+        });
+    });
+});
+    
+    </script>
 
 </head>
 
 <body>
-
+<form>
     <div id="wrapper">
 
             <?php include('navbar.inc.php'); ?> 
@@ -55,25 +136,37 @@ require_once 'connexion_bdd.php';
             
             <!-- Politique -->
             <div class="row">
-                <label for="inputStrength">Politique:</label>
+                <label for="inputPolitique">Politique:</label>
             </div>
             
             <div class="row">
                 <div class="col-lg-6 form-group">
-                    <input type="text" class="form-control" id="inputPol" placeholder="Ajouter un critère">
+                    <input id="inputPolitique" name="inputPolitique" type="text" class="form-control" placeholder="Ajouter un nouveau critère">
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-primary col-md-3" onclick="addOption('inputPol','listPol')">Ajouter</button>  
+                     <input type="submit" class="btn btn-primary col-md-3" value="Ajouter" onclick="majInputType('AjoutPolitique');" />
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-6 form-group">
-                    <select id="listPol" class="form-control" size="5">
+                    <select id ="listePolitique" class="form-control" name="listePolitique" size="5" onchange="selectOnChange('listePolitique','inputPolitiqueSelect')">
+                     <?php
+                            $liste=listerPestel($connexion,$_SESSION['id_pestel'],'Politique');
+                            if(!empty($liste))
+                            {
+                               foreach ($liste as $donnee) 
+                                {
+                                    affichage($connexion,$donnee);
+                                }
+                            }
+                            
+                        ?>
                     </select>
                     
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-danger col-md-3" onclick="delOption('listPol')">Supprimer</button>  
+                <!--   <button type="button" class="btn btn-danger col-md-3">Supprimer</button> -->
+                    <input type="submit" class="btn btn-danger col-md-3" value="Supprimer" onclick="majInputType('SupprPolitique');" />
                 </div>
             </div>
             
@@ -85,112 +178,171 @@ require_once 'connexion_bdd.php';
             </div>
             <div class="row">
                 <div class="col-lg-6 form-group">
-                    <input type="text" class="form-control" id="inputEcon" placeholder="Ajouter un critère">
+                    <input id="inputEconomique" name="inputEconomique" type="text" class="form-control" placeholder="Ajouter un nouveau critère">
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-primary col-md-3" onclick="addOption('inputEcon','listEcon')">Ajouter</button>  
+                     <input type="submit" class="btn btn-primary col-md-3" value="Ajouter" onclick="majInputType('AjoutEconomique');" />
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-6 form-group">
-                    <select id="listEcon" class="form-control" size="5">
+                    <select id ="listeEconomique" class="form-control" name="listeEconomique" size="5" onchange="selectOnChange('listeEconomique','inputEconomiqueSelect')">
+                     <?php
+                            $liste=listerPestel($connexion,$_SESSION['id_pestel'],'Economique');
+                            if(!empty($liste))
+                            {
+                               foreach ($liste as $donnee) 
+                                {
+                                    affichage($connexion,$donnee);
+                                }
+                            }
+                            
+                        ?>
                     </select>
                     
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-danger col-md-3" onclick="delOption('listEcon')">Supprimer</button>  
+                <!--   <button type="button" class="btn btn-danger col-md-3">Supprimer</button> -->
+                    <input type="submit" class="btn btn-danger col-md-3" value="Supprimer" onclick="majInputType('SupprEconomique');" />
                 </div>
             </div>
             
              <!-- Socioculturel -->
             <div class="row">
-                <label for="inputStrength">Socioculturel:</label>
+                <label for="inputSocioCulturel">SocioCulturel:</label>
             </div>
             <div class="row">
                 <div class="col-lg-6 form-group">
-                    <input type="text" class="form-control" id="inputSoc" placeholder="Ajouter un critère">
+                    <input id="inputSocioCulturel" name="inputSocioCulturel" type="text" class="form-control" placeholder="Ajouter un nouveau critère">
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-primary col-md-3" onclick="addOption('inputSoc','listSoc')">Ajouter</button>  
+                     <input type="submit" class="btn btn-primary col-md-3" value="Ajouter" onclick="majInputType('AjoutSocioCulturel');" />
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-6 form-group">
-                    <select id="listSoc" class="form-control" size="5">
+                    <select id ="listeSocioCulturel" class="form-control" name="listeSocioCulturel" size="5" onchange="selectOnChange('listeSocioCulturel','inputSocioCulturelSelect')">
+                     <?php
+                            $liste=listerPestel($connexion,$_SESSION['id_pestel'],'SocioCulturel');
+                            if(!empty($liste))
+                            {
+                               foreach ($liste as $donnee) 
+                                {
+                                    affichage($connexion,$donnee);
+                                }
+                            }
+                            
+                        ?>
                     </select>
                     
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-danger col-md-3" onclick="delOption('listSoc')">Supprimer</button>  
+                <!--   <button type="button" class="btn btn-danger col-md-3">Supprimer</button> -->
+                    <input type="submit" class="btn btn-danger col-md-3" value="Supprimer" onclick="majInputType('SupprSocioCulturel');" />
                 </div>
             </div>
             
              <!-- Technologique -->
             <div class="row">
-                <label for="inputStrength">Technologique:</label>
+                <label for="inputTechnologique">Technologique:</label>
             </div>
             <div class="row">
                 <div class="col-lg-6 form-group">
-                    <input type="text" class="form-control" id="inputTec" placeholder="Ajouter un critère">
+                    <input id="inputTechnologique" name="inputTechnologique" type="text" class="form-control" placeholder="Ajouter un nouveau critère">
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-primary col-md-3" onclick="addOption('inputTec','listTec')">Ajouter</button>  
+                     <input type="submit" class="btn btn-primary col-md-3" value="Ajouter" onclick="majInputType('AjoutTechnologique');" />
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-6 form-group">
-                    <select id="listTec" class="form-control" size="5">
+                    <select id ="listeTechnologique" class="form-control" name="listeTechnologique" size="5" onchange="selectOnChange('listeTechnologique','inputTechnologiqueSelect')">
+                     <?php
+                            $liste=listerPestel($connexion,$_SESSION['id_pestel'],'Technologique');
+                            if(!empty($liste))
+                            {
+                               foreach ($liste as $donnee) 
+                                {
+                                    affichage($connexion,$donnee);
+                                }
+                            }
+                            
+                        ?>
                     </select>
                     
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-danger col-md-3" onclick="delOption('listTec')">Supprimer</button>  
+                <!--   <button type="button" class="btn btn-danger col-md-3">Supprimer</button> -->
+                    <input type="submit" class="btn btn-danger col-md-3" value="Supprimer" onclick="majInputType('SupprTechnologique');" />
                 </div>
             </div>
-
             <!-- Ecologique -->
             <div class="row">
-                <label for="inputStrength">Ecologique:</label>
+                <label for="inputEcologique">Ecologique:</label>
             </div>
             <div class="row">
                 <div class="col-lg-6 form-group">
-                    <input type="text" class="form-control" id="inputEcol" placeholder="Ajouter un critère">
+                    <input id="inputEcologique" name="inputEcologique" type="text" class="form-control" placeholder="Ajouter un nouveau critère">
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-primary col-md-3" onclick="addOption('inputEcol','listEcol')">Ajouter</button>  
+                     <input type="submit" class="btn btn-primary col-md-3" value="Ajouter" onclick="majInputType('AjoutEcologique');" />
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-6 form-group">
-                    <select id="listEcol" class="form-control" size="5">
+                    <select id ="listeEcologique" class="form-control" name="listeEcologique" size="5" onchange="selectOnChange('listeEcologique','inputEcologiqueSelect')">
+                     <?php
+                            $liste=listerPestel($connexion,$_SESSION['id_pestel'],'Ecologique');
+                            if(!empty($liste))
+                            {
+                               foreach ($liste as $donnee) 
+                                {
+                                    affichage($connexion,$donnee);
+                                }
+                            }
+                            
+                        ?>
                     </select>
                     
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-danger col-md-3" onclick="delOption('listEcol')">Supprimer</button>  
+                <!--   <button type="button" class="btn btn-danger col-md-3">Supprimer</button> -->
+                    <input type="submit" class="btn btn-danger col-md-3" value="Supprimer" onclick="majInputType('SupprEcologique');" />
                 </div>
             </div>
 
             <!-- Légal -->
             <div class="row">
-                <label for="inputStrength">Légal:</label>
+                <label for="inputLegal">Légal:</label>
             </div>
             <div class="row">
                 <div class="col-lg-6 form-group">
-                    <input type="text" class="form-control" id="inputLeg" placeholder="Ajouter un critère">
+                    <input id="inputLegal" name="inputLegal" type="text" class="form-control" placeholder="Ajouter un nouveau critère">
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-primary col-md-3" onclick="addOption('inputLeg','listLeg')">Ajouter</button>  
+                     <input type="submit" class="btn btn-primary col-md-3" value="Ajouter" onclick="majInputType('AjoutLegal');" />
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-6 form-group">
-                    <select id="listLeg" class="form-control" size="5">
+                    <select id ="listeLegal" class="form-control" name="listeLegal" size="5" onchange="selectOnChange('listeLegal','inputLegalSelect')">
+                     <?php
+                            $liste=listerPestel($connexion,$_SESSION['id_pestel'],'Legal');
+                            if(!empty($liste))
+                            {
+                               foreach ($liste as $donnee) 
+                                {
+                                    affichage($connexion,$donnee);
+                                }
+                            }
+                            
+                        ?>
                     </select>
                     
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn btn-danger col-md-3" onclick="delOption('listLeg')">Supprimer</button>  
+                <!--   <button type="button" class="btn btn-danger col-md-3">Supprimer</button> -->
+                    <input type="submit" class="btn btn-danger col-md-3" value="Supprimer" onclick="majInputType('SupprLegal');" />
                 </div>
             </div>
 
@@ -204,11 +356,17 @@ require_once 'connexion_bdd.php';
             </div>
         </form>
         </div>
-        <!-- /#page-wrapper -->
+        <input id="inputTypeAction" name="inputTypeAction" type="hidden" value=""/>
+        <input id="inputPolitiqueSelect" name="inputPolitiqueSelect" type="hidden" value=""/>
+        <input id="inputEconomiqueSelect" name="inputEconomiqueSelect" type="hidden" value=""/>
+        <input id="inputSocioCulturelSelect" name="inputSocioCulturelSelect" type="hidden" value=""/>
+        <input id="inputTechnologiqueSelect" name="inputTechnologiqueSelect" type="hidden" value=""/>
+        <input id="inputEcologiqueSelect" name="inputEcologiqueSelect" type="hidden" value=""/>
+        <input id="inputLegalSelect" name="inputLegalSelect" type="hidden" value=""/>
 
     </div>
     <!-- /#wrapper -->
-
+</form>
     <!-- jQuery -->
     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
 
