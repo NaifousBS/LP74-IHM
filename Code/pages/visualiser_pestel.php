@@ -145,12 +145,12 @@ if(!empty($_POST)){
                 <!-- Nom projet -->
                 <div class="col-lg-4">
                     <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            Titre
+                        <div class="panel-heading" style="text-align:center;">
+                          <h2><?php echo $_SESSION['nom_projet']; ?></h2> 
                         </div>
-                        <div class="panel-body">
+                    <!--    <div class="panel-body">
                             <p>Titre du diagramme PESTEL</p>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 

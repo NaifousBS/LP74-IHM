@@ -9,7 +9,7 @@ if(!empty($_GET)){
    
     $_SESSION['id_ichikawa'] = $_GET['idIshi'];
 
-    $req="SELECT ID_SWOT,ID_PESTEL FROM donnees 
+    $req="SELECT ID_SWOT,ID_PESTEL,CONTENU FROM donnees 
             WHERE ID_ICHIKAWA = ".$_SESSION['id_ichikawa']." AND NOEUD = 0";
     $reponse= $connexion->prepare($req);
     $reponse->execute();
@@ -17,6 +17,7 @@ if(!empty($_GET)){
     
     $_SESSION['id_swot'] = $donnees[0];
     $_SESSION['id_pestel'] = $donnees[1];
+    $_SESSION['nom_projet'] = $donnees[2];
    
     
     /*echo $_SESSION['id_ichikawa']." ";

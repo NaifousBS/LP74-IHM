@@ -36,7 +36,7 @@ if(!empty($_POST)){
     $donnees3 = $reponse->fetch();
 
     $_SESSION['id_pestel'] = $donnees3[0];
-
+    $_SESSION['nom_projet'] = $_POST['nomProjet'];
 
     $req = $connexion->prepare("INSERT INTO donnees(id_ichikawa, id_swot, id_pestel, contenu, noeud) VALUES (:id_ichikawa,:id_swot,:id_pestel, :contenu, :noeud)");
     $req->execute(array(
