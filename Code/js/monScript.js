@@ -31,6 +31,11 @@ function selectOnChange(idSelect,idInput)
 {
      document.getElementById(idInput).value = document.getElementById(idSelect).value;
 }
+function selectOnChangeIshi(idSelect,idInput)
+{
+	var select = document.getElementById(idSelect);
+     document.getElementById(idInput).value = select.options[select.selectedIndex].text;
+}
 
 function envoiForm()
 {

@@ -136,6 +136,25 @@ function listerPestel($cnn,$idPestel,$intitule)
     return $liste;
 }
 
+function listerIshikawa($cnn,$idIchi)
+{
+    $req = "SELECT ID_DONNEES,CONTENU FROM `donnees` 
+            WHERE ID_ICHIKAWA = ".$idIchi." AND NOEUD > 0";
+    $reponse = $cnn->prepare($req);
+
+    $liste=array();
+    if($reponse->execute())
+    {
+         while ($donnees = $reponse->fetch())
+        {
+            array_push($liste, array($donnees['ID_DONNEES'],$donnees['CONTENU']));
+        }
+    }
+   
+    return $liste;
+
+}
+
 function listerProjets($cnn)
 {
     $req="  SELECT ID_ICHIKAWA,CONTENU FROM donnees natural join ichikawa
