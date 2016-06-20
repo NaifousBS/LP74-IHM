@@ -38,9 +38,11 @@ if(!empty($_POST)){
     $_SESSION['id_pestel'] = $donnees3[0];
 
 
-    $req = $connexion->prepare("INSERT INTO donnees(id_ichikawa, contenu, noeud) VALUES (:id_ichikawa, :contenu, :noeud)");
+    $req = $connexion->prepare("INSERT INTO donnees(id_ichikawa, id_swot, id_pestel, contenu, noeud) VALUES (:id_ichikawa,:id_swot,:id_pestel, :contenu, :noeud)");
     $req->execute(array(
     	'id_ichikawa' => $_SESSION['id_ichikawa'],
+        'id_swot' => $_SESSION['id_pestel'],
+        'id_pestel' => $_SESSION['id_pestel'],
     	'contenu' => $_POST['nomProjet'],
     	'noeud' => 0
     	));

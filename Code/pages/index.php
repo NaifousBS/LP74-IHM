@@ -91,19 +91,27 @@ include('bibliotheque_fonctions.php');
                         <h2><span class="label label-primary">ou chargez un projet dans la liste</span></h2>                        
                     </div>
                 </div>
-                <div class="row" style="margin-top: 20px; margin-left: 40px;">
-                    <div class="dropdown">
-                          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Chargez un projet
+                <div class="row" >
+                    <div class="dropdown col-sm-4" style="margin-top: 20px">
+                          <button class="btn  dropdown-toggle" type="button" data-toggle="dropdown">Chargez un projet
                           <span class="caret"></span></button>
                           <ul class="dropdown-menu">
-                            <li><a href="#">Projet1</a></li>
-                            <li><a href="#">Projet2</a></li>
-                            <li><a href="#">Projet3</a></li>
+                              <?php
+                                    $liste=listerProjets($connexion);
+                                    if(!empty($liste))
+                                    {
+                                       foreach ($liste as $objectif) 
+                                        {
+                                            affichageProjet($connexion,$objectif);
+                                        }
+                                    }
+
+                                ?>
+                            
                           </ul>
                     </div>
                 </div>
         </div>
-    </div>
     </div>
     <!-- jQuery -->
     <script src="../bower_components/jquery/dist/jquery.min.js"></script>

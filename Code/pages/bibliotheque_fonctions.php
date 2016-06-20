@@ -136,6 +136,30 @@ function listerPestel($cnn,$idPestel,$intitule)
     return $liste;
 }
 
+function listerProjets($cnn)
+{
+    $req="  SELECT ID_ICHIKAWA,CONTENU FROM donnees natural join ichikawa
+
+            WHERE NOEUD = 0 ";
+    $reponse= $cnn->prepare($req);
+    
+    $liste =array();
+    if($reponse->execute())
+    {
+         while ($donnees = $reponse->fetch())
+        {
+            array_push($liste, array($donnees['ID_ICHIKAWA'],$donnees['CONTENU']));
+        }
+    }
+   
+    return $liste;
+}
+function affichageProjet($cnn,$entree) // affiche le titre 
+{
+    
+    echo '<li><a href="traitementChoixProjet.php?idIshi='.$entree[0].'" >'.$entree[1].'</a></li>';
+}
+
 
 
 ?>
