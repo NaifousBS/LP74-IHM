@@ -1,10 +1,14 @@
- <?php require_once 'connexion_bdd.php'; ?>
+ <?php 
+session_start();
+require_once 'connexion_bdd.php'; 
+
+?>
 <?php
 if($_GET)
 {
     
     $type=$_GET['inputTypeAction'];
-    $paramishi = 1;
+    $paramishi = $_SESSION['id_ichikawa'];
 
     if($type == 'AjoutObj')
     {

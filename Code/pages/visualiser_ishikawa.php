@@ -1,4 +1,5 @@
  <?php
+session_start();
 require_once 'connexion_bdd.php';
 include('bibliotheque_fonctions.php');
 
@@ -91,7 +92,7 @@ include('bibliotheque_fonctions.php');
            
            ';
     
-        $listeNoeud0=listerNoeuds0($connexion,1);
+        $listeNoeud0=listerNoeuds0($connexion,$_SESSION['id_ichikawa']);
         if(!empty($listeNoeud0))
         {
             foreach ($listeNoeud0 as $noeud0) 
@@ -101,7 +102,7 @@ include('bibliotheque_fonctions.php');
 
         }
     
-        $liste=listerNoeuds1($connexion,1);
+        $liste=listerNoeuds1($connexion,$_SESSION['id_ichikawa']);
         if(!empty($liste))
         {
             echo ' "causes":[';
@@ -109,7 +110,7 @@ include('bibliotheque_fonctions.php');
             {
                echo ' { "text":"'.$noeud1[1].'", "size":14, "weight":"Bold"';
 
-               $listeNoeud2 = listerNoeuds2AvecParent($connexion,1, $noeud1[0]);
+               $listeNoeud2 = listerNoeuds2AvecParent($connexion,$_SESSION['id_ichikawa'], $noeud1[0]);
 
 
                 if(!empty($listeNoeud2))

@@ -1,4 +1,5 @@
  <?php
+session_start();
 require_once 'connexion_bdd.php';
 include('bibliotheque_fonctions.php');
 
@@ -135,7 +136,7 @@ include('bibliotheque_fonctions.php');
                         <select  id ="listObjectifs" class="form-control" name="listObjectifs" size="20" onchange="selectOnChange('listObjectifs','inputObjSelect')">
 
                         <?php
-                            $liste=listerObjectifs($connexion,1);
+                            $liste=listerObjectifs($connexion,$_SESSION['id_ichikawa']);
                             if(!empty($liste))
                             {
                                foreach ($liste as $objectif) 
@@ -152,7 +153,7 @@ include('bibliotheque_fonctions.php');
                     <div class="col-lg-3 form-group">
                         <select id ="listNoeuds1" class="form-control" name="listNoeuds" size="20" onchange="selectOnChange('listNoeuds1','inputNoeud1Select');majInputType('Noeud1Changed');envoiForm();">
                          <?php
-                                $liste=listerNoeuds1($connexion,1);
+                                $liste=listerNoeuds1($connexion,$_SESSION['id_ichikawa']);
                                 if(!empty($liste))
                                 {
                                     foreach ($liste as $noeud1) 

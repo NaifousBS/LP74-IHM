@@ -1,6 +1,8 @@
  <?php
+session_start();
 require_once 'connexion_bdd.php';
 include('bibliotheque_fonctions.php');
+
 
 ?>
 
@@ -116,22 +118,17 @@ include('bibliotheque_fonctions.php');
             <div class="row">
                 <div class="col-lg-4 form-group">
                     <select  id ="listObjectifs" class="form-control" name="listObjectifs" size="20" onchange="selectOnChange('listObjectifs','inputObjSelect')">
-                       
-                        
-                        
+
                         <?php
-                            $liste=listerObjectifs($connexion,1);
-                            if(empty($liste)==true)
+                            $liste=listerObjectifs($connexion,$_SESSION['id_ichikawa']);
+                            if(!empty($liste))
                             {
-                               
-                            }
-                            else
-                            {
-                                foreach ($liste as $objectif) 
+                               foreach ($liste as $objectif) 
                                 {
                                     affichage($connexion,$objectif);
                                 }
                             }
+                            
                         ?>
 
                     </select>
@@ -147,7 +144,7 @@ include('bibliotheque_fonctions.php');
                 <div class="col-lg-4 form-group">
                     <select id ="listNoeuds" class="form-control" name="listNoeuds" size="20" onchange="selectOnChange('listNoeuds','inputNoeud1Select')">
                      <?php
-                            $liste=listerNoeuds1($connexion,1);
+                            $liste=listerNoeuds1($connexion,$_SESSION['id_ichikawa']);
                             if(empty($liste)==true)
                             {
                                
@@ -168,7 +165,7 @@ include('bibliotheque_fonctions.php');
             </div>
             
             
-           <input id="inputTypeAction" name="inputTypeAction" type="hidden" value=""/>
+            <input id="inputTypeAction" name="inputTypeAction" type="hidden" value=""/>
             <input id="inputObjSelect" name="inputObjSelect" type="hidden" value=""/>
             <input id="inputNoeud1Select" name="inputNoeud1Select" type="hidden" value=""/>
         
