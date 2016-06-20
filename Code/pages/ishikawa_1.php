@@ -76,6 +76,8 @@ include('bibliotheque_fonctions.php');
 });
     
     </script>
+    
+   
 
 </head>
 
@@ -161,7 +163,8 @@ include('bibliotheque_fonctions.php');
                 </div>
             </div>
             <div class="row col-lg-9 form-group">
-                <button type="button" class="btn btn-info pull-right" onclick="window.location='ishikawa_2.php'"> Choisir les arêtes secondaires </button> <br/>
+                <button type="button" class="btn btn-secondary" onclick="window.location='visualiser_pestel.php';">Retour au PESTEL</button>
+                <button type="button" class="btn btn-info pull-right" onclick="window.location='ishikawa_2.php'"> Choisir arêtes 2 </button> <br/>
             </div>
             
             

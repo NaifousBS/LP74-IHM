@@ -1,5 +1,7 @@
 <?php
 session_start();
+require_once 'connexion_bdd.php';
+include('bibliotheque_fonctions.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">

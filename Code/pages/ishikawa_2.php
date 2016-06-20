@@ -200,6 +200,7 @@ include('bibliotheque_fonctions.php');
                     </div>
                 </div>
                 <div class="row col-lg-10 form-group">
+                    <button type="button" class="btn btn-secondary" onclick="window.location='ishikawa_1.php';">Retour choix arêtes 1</button>
                     <button type="button" class="btn btn-info pull-right" onclick="window.location='visualiser_ishikawa.php';"> Visualiser </button> <br/>
                 </div>
 

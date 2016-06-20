@@ -230,10 +230,10 @@ include('bibliotheque_fonctions.php');
                 
                       <div id="myDiagramDiv" style="height:550px;width:100%;border:1px solid black;"></div>
                       <div id="buttons">
-                        <label>Layout:</label>
-                        <button onclick="layoutFishbone()">Fishbone</button>
-                        <button onclick="layoutBranching()">Branching</button>
-                        <button onclick="layoutNormal()">Normal</button>
+                        <label>Vue:</label>
+                        <button onclick="layoutFishbone()">Arête</button>
+                        <button onclick="layoutBranching()">Branche</button>
+                        <button onclick="layoutNormal()">Arbre</button>
                       </div>
                   
                       
