@@ -84,7 +84,7 @@ if($_GET)
     else if($type == 'Noeud1Changed')
     {
        $idNoeud1=$_GET['inputNoeud1Select'];
-        $liste=listerNoeud2($connexion,1,$idNoeud1);
+        $liste=listerNoeud2($connexion,$paramishi,$idNoeud1);
         $retour="";
         
         if(!empty($liste))
