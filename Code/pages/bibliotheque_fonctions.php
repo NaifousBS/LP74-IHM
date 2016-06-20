@@ -23,6 +23,11 @@ function affichage($cnn,$entree) // affiche le titre
     echo '<option value="'.$entree[0].'">'.$entree[1].'</option>';
 }
 
+function affichePanel($cnn,$entree) // affiche les données dans le panel
+{
+    echo '- '.$entree[1].'<br/>';
+}
+
 
 function listerNoeuds1($cnn,$id)
 {

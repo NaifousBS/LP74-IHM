@@ -1,5 +1,8 @@
 <?php
+session_start();
 require_once 'connexion_bdd.php';
+include('bibliotheque_fonctions.php');
+
 ?>
 
 <?php
@@ -71,52 +74,75 @@ if(!empty($_POST)){
             <!-- /.row -->
             <div class="row">
 
-                <!-- /.col-lg-4 -->
+                <!-- Politique -->
                 <div class="col-lg-4">
                     <div class="panel panel-yellow">
                         <div class="panel-heading">
                             Politique
                         </div>
                         <div class="panel-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
-                        </div>
-                        <div class="panel-footer">
-                            Panel Footer
+                            <?php
+                                $liste=listerPestel($connexion,$_SESSION['id_swot'],'Politique');
+                                if(!empty($liste))
+                                {
+                                   foreach ($liste as $donnee) 
+                                    {
+                                        affichePanel($connexion,$donnee);
+                                    }
+                                }
+                            
+                             ?>
                         </div>
                     </div>
                 </div>
+
+                <!-- Economique -->
                 <div class="col-lg-offset-4 col-lg-4">
                     <div class="panel panel-yellow">
                         <div class="panel-heading">
                             Economique
                         </div>
                         <div class="panel-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
-                        </div>
-                        <div class="panel-footer">
-                            Panel Footer
+                            <?php
+                                $liste=listerPestel($connexion,$_SESSION['id_swot'],'Economique');
+                                if(!empty($liste))
+                                {
+                                   foreach ($liste as $donnee) 
+                                    {
+                                        affichePanel($connexion,$donnee);
+                                    }
+                                }
+                            
+                             ?>
                         </div>
                     </div>
-                    <!-- /.col-lg-4 -->
                 </div>
             </div>
+
                 <div class="row">
-                <!-- /.col-lg-4 -->
+                <!-- SocioCulturel -->
                 <div class="col-lg-4">
                     <div class="panel panel-yellow">
                         <div class="panel-heading">
-                            Socioculturel
+                            SocioCulturel
                         </div>
                         <div class="panel-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
-                        </div>
-                        <div class="panel-footer">
-                            Panel Footer
+                            <?php
+                                $liste=listerPestel($connexion,$_SESSION['id_swot'],'SocioCulturel');
+                                if(!empty($liste))
+                                {
+                                   foreach ($liste as $donnee) 
+                                    {
+                                        affichePanel($connexion,$donnee);
+                                    }
+                                }
+                            
+                             ?>
                         </div>
                     </div>
                 </div>
                 
-                <!-- /.col-lg-4 -->
+                <!-- Nom projet -->
                 <div class="col-lg-4">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
@@ -127,49 +153,74 @@ if(!empty($_POST)){
                         </div>
                     </div>
                 </div>
+
+                <!-- Technologique -->
                 <div class="col-lg-4">
                     <div class="panel panel-yellow">
                         <div class="panel-heading">
                             Technologique
                         </div>
                         <div class="panel-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
-                        </div>
-                        <div class="panel-footer">
-                            Panel Footer
+                            <?php
+                                $liste=listerPestel($connexion,$_SESSION['id_swot'],'Technologique');
+                                if(!empty($liste))
+                                {
+                                   foreach ($liste as $donnee) 
+                                    {
+                                        affichePanel($connexion,$donnee);
+                                    }
+                                }
+                            
+                             ?>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
+                <!-- Ecologique -->
                 <div class="col-lg-4">
                     <div class="panel panel-yellow">
                         <div class="panel-heading">
                             Ecologique
                         </div>
                         <div class="panel-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
-                        </div>
-                        <div class="panel-footer">
-                            Panel Footer
+                            <?php
+                                $liste=listerPestel($connexion,$_SESSION['id_swot'],'Ecologique');
+                                if(!empty($liste))
+                                {
+                                   foreach ($liste as $donnee) 
+                                    {
+                                        affichePanel($connexion,$donnee);
+                                    }
+                                }
+                            
+                             ?>
                         </div>
                     </div>
                 </div>
+                <!-- Légal -->
                 <div class="col-lg-offset-4 col-lg-4">
                     <div class="panel panel-yellow">
                         <div class="panel-heading">
                             Légal
                         </div>
                         <div class="panel-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
-                        </div>
-                        <div class="panel-footer">
-                            Panel Footer
+                            <?php
+                                $liste=listerPestel($connexion,$_SESSION['id_swot'],'Legal');
+                                if(!empty($liste))
+                                {
+                                   foreach ($liste as $donnee) 
+                                    {
+                                        affichePanel($connexion,$donnee);
+                                    }
+                                }
+                            
+                             ?>
                         </div>
                     </div>
                 </div>
-                <!-- /.col-lg-4 -->
             </div>
+            
             <div class="row">               
                     <button type="button" class="btn btn-secondary pull-left" onclick="window.location='construire_pestel.php';">Modifier le PESTEL</button>  
                    <button type="button" class="btn btn-info pull-right" onclick="window.location='ishikawa_1.php';">Passer au ISHIKAWA</button>                  

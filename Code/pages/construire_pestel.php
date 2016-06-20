@@ -350,7 +350,7 @@ include('bibliotheque_fonctions.php');
             <div class="row">
                 <div class="form-group col-lg-6">
                    <button type="button" class="btn btn-secondary" onclick="window.location='visualiser_swot.php';">Retour au SWOT</button>
-                   <input type="submit" value="Valider" />
+
                    <button type="button" class="btn btn-info pull-right " onclick="window.location='visualiser_pestel.php';">Visualiser le PESTEL</button>  
                 </div>
             </div>

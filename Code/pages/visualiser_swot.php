@@ -1,3 +1,10 @@
+<?php
+session_start();
+require_once 'connexion_bdd.php';
+include('bibliotheque_fonctions.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,10 +59,20 @@
                 <div class="col-lg-4">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                            Strength
+                            Forces
                         </div>
                         <div class="panel-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
+                             <?php
+                                $liste=listerSwot($connexion,$_SESSION['id_swot'],'Force');
+                                if(!empty($liste))
+                                {
+                                   foreach ($liste as $donnee) 
+                                    {
+                                        affichePanel($connexion,$donnee);
+                                    }
+                                }
+                            
+                             ?>
                         </div>
                        
                     </div>
@@ -63,10 +80,20 @@
                 <div class="col-lg-4">
                     <div class="panel panel-yellow">
                         <div class="panel-heading">
-                            Weaknesses
+                            Faiblesses
                         </div>
                         <div class="panel-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
+                            <?php
+                                $liste=listerSwot($connexion,$_SESSION['id_swot'],'Faiblesse');
+                                if(!empty($liste))
+                                {
+                                   foreach ($liste as $donnee) 
+                                    {
+                                        affichePanel($connexion,$donnee);
+                                    }
+                                }
+                            
+                             ?>
                         </div>
                         
                     </div>
@@ -81,10 +108,20 @@
                 <div class="col-lg-4">
                     <div class="panel panel-green">
                         <div class="panel-heading">
-                            Opportunities
+                            Opportunités
                         </div>
                         <div class="panel-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
+                            <?php
+                                $liste=listerSwot($connexion,$_SESSION['id_swot'],'Opportunite');
+                                if(!empty($liste))
+                                {
+                                   foreach ($liste as $donnee) 
+                                    {
+                                        affichePanel($connexion,$donnee);
+                                    }
+                                }
+                            
+                             ?>
                         </div>
                         
                     </div>
@@ -93,11 +130,21 @@
                 <div class="col-lg-4">
                     <div class="panel panel-red">
                         <div class="panel-heading">
-                            Threats
+                            Menaces
                         </div>
                         <div class="panel-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
-                        </div>
+                            <?php
+                                $liste=listerSwot($connexion,$_SESSION['id_swot'],'Menace');
+                                if(!empty($liste))
+                                {
+                                   foreach ($liste as $donnee) 
+                                    {
+                                        affichePanel($connexion,$donnee);
+                                    }
+                                }
+                            
+                             ?>                        
+                         </div>
                         
                     </div>
                 </div>
