@@ -264,7 +264,6 @@ include('bibliotheque_fonctions.php');
         </div>
         <!-- /#page-wrapper -->
 
-    </div>
     <!-- /#wrapper -->
 
     <!-- jQuery -->
