@@ -47,3 +47,9 @@ function majInputType(type)
 {
     document.getElementById('inputTypeAction').value=type; 
 }
+
+function supprInputType(type)
+{
+	var x = document.getElementById('inputTypeAction');
+	x.remove(x.selectedIndex);
+}

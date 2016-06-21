@@ -234,9 +234,10 @@ include('bibliotheque_fonctions.php');
                         <button onclick="layoutNormal()">Arbre</button>
                       </div>
             </div>
-            <form action="renommerIshi.php" method="POST">
+            
             <div class="row">
-              <div class="col-lg-6 form-group">
+                <form action="gestionIshi.php" method="POST">
+                <div class="col-lg-6 form-group">
                     <select id ="listeObjectifs" class="form-control" name="listeObjectifs" size="5" onchange="selectOnChangeIshi('listeObjectifs','inputObjectifsSelect');selectOnChange('listeObjectifs','idObjetSelect')">
                        <?php
                           $liste=listerIshikawa($connexion,$_SESSION['id_ichikawa']);
@@ -250,21 +251,23 @@ include('bibliotheque_fonctions.php');
                         ?>
                     </select>
               </div>
-              <div class="col-lg-3 form-group">
-                <input name="inputObjectifsSelect" type="text" class="form-control col-lg-3" id="inputObjectifsSelect" placeholder="Renommer l'objectif">
-                <input type="hidden" name="idObjetSelect" id="idObjetSelect"/>
-            </div>
-            <div class="col-lg-1 form-group">
-                 <input type="submit" class="btn btn-success pull-right" value="Renommer" onclick="majInputType('AjoutObj');" />
-            </div>
-            </div>
-          </form>
-            </div>
-            <!-- /.row -->
+                <div class="row">
+                      <div class="col-lg-3 form-group">
+                        <input name="inputObjectifsSelect" type="text" class="form-control col-lg-3" id="inputObjectifsSelect" placeholder="Renommer l'objectif">
+                        <input type="hidden" name="idObjetSelect" id="idObjetSelect"/>
+                    </div>
+                    <div class="col-lg-1 form-group">
+                         <input type="submit" name="renommerObj" class="btn btn-success pull-right" value="Renommer" onclick="majInputType('AjoutObj');" />
+                    </div>
+                    <div class="col-lg-offset-3 col-lg-1 form-group">
+                         <input type="submit" name="supprObj" class="btn btn-danger pull-right" value="Supprimer" onclick="supprInputType('AjoutObj');" />
+                    </div>
+                </div>
+                </form>
         </div>
-        <!-- /#page-wrapper -->
-
-    <!-- /#wrapper -->
+         
+    </div>
+</div>
 
     <!-- jQuery -->
     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
