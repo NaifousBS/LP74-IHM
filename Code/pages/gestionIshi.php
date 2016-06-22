@@ -21,10 +21,29 @@ if(!empty($_POST)){
         }
     
     if(isset($_POST['supprObj'])){
+
         
-        echo "DELETE FROM donnees WHERE ID_DONNEES = '".$_POST['idObjetSelect']."' AND CONTENU='".$_POST['inputObjectifsSelect']."'";
-        $req = $connexion->prepare("DELETE FROM donnees WHERE ID_DONNEES = '".$_POST['idObjetSelect']."' AND CONTENU='".$_POST['inputObjectifsSelect']."'");
-            $req->execute();
+        
+        /*$req = $connexion->prepare("DELETE FROM donnees WHERE ID_DONNEES = '".$_POST['idObjetSelect']."' AND CONTENU='".$_POST['inputObjectifsSelect']."'");
+            $req->execute();*/
+        
+        
+        $maReq="
+        UPDATE donnees 
+        SET 
+        NOEUD = NULL,
+        NOEUDPARENT=NULL
+        
+        WHERE ID_DONNEES = ".$_POST['idObjetSelect']."
+        ;
+        UPDATE donnees
+        SET NOEUDPARENT=NULL,
+            NOEUD = NULL
+        WHERE NOEUDPARENT = ".$_POST['idObjetSelect'];
+       
+        $req = $connexion->prepare($maReq);
+        $req->execute();
+        
 
         header('location:visualiser_ishikawa.php');
         
