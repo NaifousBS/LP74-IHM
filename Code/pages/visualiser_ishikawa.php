@@ -234,7 +234,36 @@ include('bibliotheque_fonctions.php');
                         <button onclick="layoutNormal()">Arbre</button>
                       </div>
             </div>
-            
+   
+            <!-- Aide -->
+            <div class="row">
+              <div class="col-sm-12" style="margin-top: 20px;font-weight: bold">
+                <p>                    
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-question-circle" aria-hidden="true"></i> Aide</button>
+
+                    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <h2 style="margin-left: 30px">Navigation sur Ishikawa (clic sur le diagramme) :</h2> <br/>
+                          - Zoom : CTRL+molette ou CTRL+(+ ou -) <br/>
+                          - Déplacer : Faire glisser avec la souris <br/>
+                          - Changer type de vue : cliquer sur une des vues en-dessous du diagramme <br/>
+                          - Renommer : sélectionner le champ dans la liste, puis le renommer dans la zone de saisie et cliquer sur "Renommer"<br/>
+                          - Supprimer : sélectionner le champ dans la liste, puis cliquer sur "Supprimer"<br/>
+                        </div>
+                      </div>
+                    </div>
+
+                  </p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12" style="font-weight: bold">
+                <p><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Ici, vous pouvez renommer ou supprimer un ou plusieurs objectifs de la liste suivante :</p>
+              </div>
+            </div>
+
             <div class="row">
                 <form action="gestionIshi.php" method="POST">
                 <div class="col-lg-6 form-group">
