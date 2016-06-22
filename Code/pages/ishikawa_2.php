@@ -82,6 +82,10 @@ include('bibliotheque_fonctions.php');
                 $("#listNoeuds2").append(msg.substring(3));
 
             }
+            else if(msg.substring(1, 3) == 7)
+            {
+                delOption('listObjectifs');
+            }
            
             
         //alert( "Data Saved: " + msg );
@@ -120,7 +124,8 @@ include('bibliotheque_fonctions.php');
                     <!--<label for="listObjectifs">Objectifs:</label> -->
                 </div>
                 <div class="col-lg-1 form-group">
-                     <input type="submit" class="btn btn-success pull-right" value="+" onclick="majInputType('AjoutObj');" /> 
+                     <input type="submit" class="btn btn-success pull-left" value="+" onclick="majInputType('AjoutObj');" /> 
+                    <input type="submit" class="btn btn-danger pull-right" value="-" onclick="majInputType('SupprObj');" title="Veuillez choisir un objectif avant de cliquer sur ce bouton"/>
                 </div> 
                 <div class="col-lg-4 form-group">
                     <label for="listNoeuds1">Arêtes niveau 1:</label>

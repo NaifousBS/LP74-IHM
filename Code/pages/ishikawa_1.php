@@ -67,6 +67,10 @@ include('bibliotheque_fonctions.php');
             {
                 addOptionFromList('listNoeuds','listObjectifs');
             }
+            else if(msg.substring(1, 3) == 7)
+            {
+                delOption('listObjectifs');
+            }
             
                 
         
@@ -107,7 +111,8 @@ include('bibliotheque_fonctions.php');
                 <input name="ajoutObj" type="text" class="form-control col-lg-3" id="inputObj" placeholder="Ajouter un nouvel objectif">
             </div>
             <div class="col-lg-1 form-group">
-                 <input type="submit" class="btn btn-success pull-right" value="+" onclick="majInputType('AjoutObj');" />
+                 <input type="submit" class="btn btn-success pull-left" value="+" onclick="majInputType('AjoutObj');"  />
+                 <input type="submit" class="btn btn-danger pull-right" value="-" onclick="majInputType('SupprObj');" title="Veuillez choisir un objectif avant de cliquer sur ce bouton"/>
             </div>
                 <div class="col-sm-1">
                     
@@ -142,6 +147,8 @@ include('bibliotheque_fonctions.php');
                     <div class="row form-group ">
                         <input type="submit" class="btn btn-danger col-sm-12" onclick="majInputType('SupprArete');" value="<<"/> 
                     </div>
+                    
+                    
                 </div>
                 <div class="col-lg-4 form-group">
                     <select id ="listNoeuds" class="form-control" name="listNoeuds" size="20" onchange="selectOnChange('listNoeuds','inputNoeud1Select')">

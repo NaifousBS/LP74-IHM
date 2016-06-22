@@ -98,7 +98,19 @@ if($_GET)
        
         echo "6 ".$retour;
         
-    }   
+    } 
+    else if($type == 'SupprObj')
+    {
+        $idNoeud2=$_GET['inputObjSelect'];
+        $req=" DELETE FROM donnees 
+               WHERE ID_DONNEES = ".$idNoeud2;
+        
+        $stmt = $connexion->prepare($req);
+        $stmt->execute();
+        
+        echo "7 ".$idNoeud2;
+        
+    }
     
     
     
