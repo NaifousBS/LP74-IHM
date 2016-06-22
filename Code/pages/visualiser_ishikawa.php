@@ -257,9 +257,9 @@ include('bibliotheque_fonctions.php');
                         <input type="hidden" name="idObjetSelect" id="idObjetSelect"/>
                     </div>
                     <div class="col-lg-1 form-group">
-                         <input type="submit" name="renommerObj" class="btn btn-success pull-right" value="Renommer" onclick="majInputType('AjoutObj');" />
+                         <input type="submit" name="renommerObj" class="btn btn-info pull-right" value="Renommer" onclick="majInputType('AjoutObj');" />
                     </div>
-                    <div class="col-lg-offset-3 col-lg-1 form-group">
+                    <div class="col-lg-1 form-group">
                          <input type="submit" name="supprObj" class="btn btn-danger pull-right" value="Supprimer" onclick="supprInputType('AjoutObj');" />
                     </div>
                 </div>
